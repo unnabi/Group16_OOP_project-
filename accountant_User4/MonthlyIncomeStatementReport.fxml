@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="487.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="269.0" layoutY="26.0" prefHeight="30.0" prefWidth="198.0" style="-fx-background-color: lime;" text="Monthly Income Statement">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="132.0" layoutY="92.0" text="Products Sold" />
+      <Label layoutX="132.0" layoutY="134.0" text="Product Price" />
+      <Label layoutX="132.0" layoutY="177.0" text="Expenses" />
+      <Label layoutX="132.0" layoutY="221.0" text="Total Income" />
+      <Label layoutX="132.0" layoutY="268.0" text="Total Net Profit" />
+      <ComboBox layoutX="283.0" layoutY="87.0" prefWidth="150.0" />
+      <TextField editable="false" layoutX="283.0" layoutY="129.0" />
+      <TextField layoutX="283.0" layoutY="172.0" />
+      <TextField layoutX="283.0" layoutY="216.0" />
+      <TextField editable="false" layoutX="283.0" layoutY="263.0" />
+      <Button layoutX="155.0" layoutY="327.0" mnemonicParsing="false" text="Calculate Total Profit" />
+      <Button layoutX="393.0" layoutY="327.0" mnemonicParsing="false" text="Generate PDF" />
+   </children>
+</AnchorPane>
