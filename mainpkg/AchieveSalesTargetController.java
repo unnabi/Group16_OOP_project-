@@ -4,9 +4,14 @@
  */
 package mainpkg;
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,7 +33,7 @@ public class AchieveSalesTargetController implements Initializable {
     @FXML
     private TextField selectMonthOnClick;
     @FXML
-    private ComboBox<?> selectProductOnClickCB;
+    private ComboBox<String> selectProductOnClickCB;
     @FXML
     private TextField targetOfSoldOnClick;
     @FXML
@@ -44,6 +49,7 @@ public class AchieveSalesTargetController implements Initializable {
 
     @FXML
     private void setTargetButtonOnClick(ActionEvent event) {
+        
     }
 
     @FXML
