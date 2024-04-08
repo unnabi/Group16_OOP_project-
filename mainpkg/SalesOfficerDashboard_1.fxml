@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="604.0" prefWidth="964.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SalesOfficerFXMLController">
+   <children>
+      <BorderPane prefHeight="604.0" prefWidth="964.0">
+         <top>
+            <Pane prefHeight="604.0" prefWidth="820.0" style="-fx-background-color: pink;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#0a4d12" layoutX="37.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WelCome TO SalesOfficer Dashboard" wrappingWidth="524.6708984375">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Text>
+                  <ComboBox fx:id="comboBoxOnClick" layoutX="593.0" layoutY="142.0" prefHeight="31.0" prefWidth="340.0" promptText="Select FXML" style="-fx-background-color: green;" />
+                  <Button layoutX="453.0" layoutY="432.0" mnemonicParsing="false" onAction="#sceneSwitchPageButtonOnClick" prefHeight="31.0" prefWidth="488.0" style="-fx-background-color: red;" text="NextPage" />
+                  <Button layoutX="37.0" layoutY="432.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: yellow;" text="Go Back" />
+                  <Text layoutX="120.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="We to salesOffier Dashboard">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="32.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the item combox and to next page fxml &amp; also view a wonderful page">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
