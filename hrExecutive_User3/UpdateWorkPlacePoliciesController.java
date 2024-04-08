@@ -31,11 +31,10 @@ public class UpdateWorkPlacePoliciesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-            // TODO4
-            policy = new Policy();
-            String policyText;
-            policyText = policy.loadPolicy();
-            policyTextArea.setText(policyText);
+        policy = new Policy();
+        String policyText;
+        policyText = policy.loadPolicy();
+        policyTextArea.setText(policyText);
         
     }    
 

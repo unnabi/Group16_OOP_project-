@@ -83,13 +83,13 @@ public class LoginScController implements Initializable {
                 newScene.Scenechanger(currentStage, "/hrExecutive_User3/HRDashBoard.fxml");
             }
             if (userType.equals("Sales Officer")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("User_MainDashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("SalesOfficerDashboard.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);
             }
             if (userType.equals("Raw Material Supplier")) {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("User_MainDashboard.fxml"));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("RawMaterialDashboard.fxml"));
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
                 currentStage.setScene(scene);

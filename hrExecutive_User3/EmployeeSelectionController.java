@@ -37,9 +37,8 @@ public class EmployeeSelectionController implements Initializable {
     @FXML
     private DatePicker assignedDatePicker;
     
-    //Employee employee;
+    Employee employee;
     
-    ArrayList<Employee> employeeList;
     Alert alert;
     
 
@@ -52,7 +51,6 @@ public class EmployeeSelectionController implements Initializable {
         departmentComboBox.getItems().addAll( "Manufacturing Machine Operator","Accountant", 
                 "HR executive", "Sales Officer", "Production Manager");
         
-        employeeList = new ArrayList();
         
 
     }    
@@ -69,67 +67,26 @@ public class EmployeeSelectionController implements Initializable {
             alert.showAndWait();
         }
         else{
-            
-//            employee = new Employee(Integer.parseInt(applicantIDTextField.getText()),
-//                Integer.parseInt(applicantContactNumberTextField.getText()),applicantNameTextField.getText(),
-//                departmentComboBox.getValue(),assignedDatePicker.getValue());
-        
-//            employeeList.add(
-//                new Employee(Integer.parseInt(applicantIDTextField.getText()),
-//                Integer.parseInt(applicantContactNumberTextField.getText()),applicantNameTextField.getText(),
-//                departmentComboBox.getValue(),assignedDatePicker.getValue())
-//            );
-            Boolean success = false;
-            File f = null;
-            FileOutputStream fos = null;      
-            ObjectOutputStream oos = null;
-        
-            try {
-                f = new File("EmployeeObject.bin");
-                
-                if (!f.exists()){
-                    fos = new FileOutputStream(f);
-                    oos = new ObjectOutputStream(fos);
-                
-                }
-                else{
-                    fos = new FileOutputStream(f,true);
-                    oos = new ObjectOutputStream(fos);
-                }
-                Employee employee = new Employee(Integer.parseInt(applicantIDTextField.getText()),
+            employee = new Employee(Integer.parseInt(applicantIDTextField.getText()),
                 Integer.parseInt(applicantContactNumberTextField.getText()),applicantNameTextField.getText(),
-                departmentComboBox.getValue(),assignedDatePicker.getValue());
-//                for(Employee s: employeeList)
-//                  oos.writeObject(s);
-//                oos.close();  
-
-                oos.writeObject(employee);
-                success = true;
-                
-            }catch(Exception e){
-                alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Warning Alert");
-                alert.setContentText(e.toString()+" error occured!!");
-                alert.setHeaderText(null);
-                alert.showAndWait();
-            }finally{
-                    oos.close();
-            }
-           
-            if(success == true){
-                alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Information");
-                alert.setContentText("Employee Successfully Added.");
-                alert.setHeaderText(null);
-                alert.showAndWait();
-            }
+                departmentComboBox.getValue(),assignedDatePicker.getValue()); 
+            
+            
+            HRExecutive.addEmployeetoList(employee, "EmployeeObject.bin");
+            
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setContentText("Employee Successfully Added.");
+            alert.setHeaderText(null);
+            alert.showAndWait();
             
             applicantNameTextField.clear();
             applicantIDTextField.clear();
             applicantContactNumberTextField.clear();
-            
+            departmentComboBox.setValue(null);
+            assignedDatePicker.setValue(null);
         }
-  
+
     }
     
 }

@@ -10,16 +10,22 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -113,62 +119,36 @@ public class InternSelectionController implements Initializable {
             alert.showAndWait();
         } 
         else {
-            
-            Boolean success = false;
-            File f = null;
-            FileOutputStream fos = null;
-            ObjectOutputStream oos = null;
-
-            try {
-                f = new File("InternObject.bin");
-
-                if (!f.exists()) {
-
-                    fos = new FileOutputStream(f);
-                    oos = new ObjectOutputStream(fos);
-
-                } else {
-
-                    fos = new FileOutputStream(f, true);
-                    oos = new ObjectOutputStream(fos);
-
-                }
-//                internList.add( new Intern(
-//            internNameTextField.getText(),uniNameComboBox.getValue(),recruitedDeptComboBox.getValue(),selectRadioButton(),
-//                        Integer.parseInt(internIDTextField.getText()),Integer.parseInt(internContactNumTextField.getText()),
-//                        recruitedDatePicker.getValue()));
-
                 Intern intern = new Intern(internNameTextField.getText(),uniNameComboBox.getValue(),recruitedDeptComboBox.getValue(),selectRadioButton(),
                         Integer.parseInt(internIDTextField.getText()),Integer.parseInt(internContactNumTextField.getText()),
                         recruitedDatePicker.getValue());
+                HRExecutive.addInterntoList(intern, "InternObject.bin");
                 
-                oos.writeObject(intern);
-                
-                success = true;
-
-            }catch(Exception e){
-                alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Warning Alert");
-                alert.setContentText(e.toString()+" error occured!!");
-                alert.setHeaderText(null);
-                alert.showAndWait();
-            }   finally{ 
-                oos.close();
-            }
-            
-            if(success == true){
                 
                 alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information");
-                alert.setContentText("Employee Successfully Added.");
+                alert.setContentText("Intern Successfully Added.");
                 alert.setHeaderText(null);
                 alert.showAndWait();
-            
-            }
-            
+
 
         }
 
+    }
+
+    @FXML
+    private void showInternListButtonOnMouseClick(ActionEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("internList.fxml"));
+        Parent scene2Parent = loader.load();
+        Scene scene2 = new Scene(scene2Parent);
+        
+        
+        Stage stg2 = (Stage)((Node)event.getSource()).getScene().getWindow(); 
+        
+        stg2.setScene(scene2);
+        stg2.show();
     }
 
 }

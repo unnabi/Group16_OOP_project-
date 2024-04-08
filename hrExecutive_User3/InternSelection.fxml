@@ -30,6 +30,7 @@
       <DatePicker fx:id="recruitedDatePicker" layoutX="214.0" layoutY="319.0" />
       <RadioButton fx:id="isPaidRadioButton" layoutX="78.0" layoutY="380.0" mnemonicParsing="false" text="Paid" />
       <RadioButton fx:id="isNonPaidRadioButton" layoutX="323.0" layoutY="380.0" mnemonicParsing="false" text="Non Paid" />
-      <Button layoutX="222.0" layoutY="442.0" mnemonicParsing="false" onAction="#hireInternOnMouseClick" prefHeight="31.0" prefWidth="163.0" style="-fx-background-radius: 0;" text="Hire Intern" />
+      <Button layoutX="117.0" layoutY="443.0" mnemonicParsing="false" onAction="#hireInternOnMouseClick" prefHeight="31.0" prefWidth="163.0" style="-fx-background-radius: 0;" text="Hire Intern" />
+      <Button layoutX="329.0" layoutY="443.0" mnemonicParsing="false" onAction="#showInternListButtonOnMouseClick" prefHeight="31.0" prefWidth="163.0" style="-fx-background-radius: 0;" text="Show Intern List" />
    </children>
 </AnchorPane>
