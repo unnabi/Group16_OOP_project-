@@ -23,6 +23,6 @@
          </font>
       </Label>
       <Button layoutX="91.0" layoutY="349.0" mnemonicParsing="false" onAction="#confirmIncrementationButtonOnMouseCkick" text="Confirm Incrementation" />
-      <Button layoutX="384.0" layoutY="349.0" mnemonicParsing="false" onAction="#notifyAccountantButtonOnMouseCkick" text="Notify Accountant" />
+      <Button layoutX="384.0" layoutY="349.0" mnemonicParsing="false" onAction="#incrementationListButtonOnMouseCkick" text="Incrementation List" />
    </children>
 </AnchorPane>

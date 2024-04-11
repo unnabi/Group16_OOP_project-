@@ -139,16 +139,15 @@ public class InternSelectionController implements Initializable {
     @FXML
     private void showInternListButtonOnMouseClick(ActionEvent event) throws IOException {
         
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("internList.fxml"));
-        Parent scene2Parent = loader.load();
-        Scene scene2 = new Scene(scene2Parent);
         
+        Parent ViewParent = FXMLLoader.load(getClass().getResource("internList.fxml"));
+        Scene newScene = new Scene(ViewParent);
+
+        Stage newWindow  = new Stage();
         
-        Stage stg2 = (Stage)((Node)event.getSource()).getScene().getWindow(); 
-        
-        stg2.setScene(scene2);
-        stg2.show();
+        newWindow.setTitle("Intern List");
+        newWindow.setScene(newScene);
+        newWindow.show();
     }
 
 }

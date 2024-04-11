@@ -67,4 +67,11 @@ public class Employee implements Serializable{
     public void setAssignedDate(LocalDate assignedDate) {
         this.assignedDate = assignedDate;
     }
+
+    @Override
+    public String toString() {
+        return "Employee{" + "employeeID=" + employeeID + ", employeeContactNumber=" + employeeContactNumber + ", employeeName=" + employeeName + ", assignedDept=" + assignedDept + ", assignedDate=" + assignedDate + '}';
+    }
+    
+    
 }

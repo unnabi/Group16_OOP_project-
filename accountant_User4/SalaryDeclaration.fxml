@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="582.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="485.0" prefWidth="582.0" style="-fx-background-color: #ab6d6d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant_User4.SalaryDeclarationController">
    <children>
-      <Label layoutX="219.0" layoutY="32.0" prefHeight="41.0" prefWidth="129.0" style="-fx-background-color: lime;" text="Salary Declaration">
+      <Label layoutX="219.0" layoutY="32.0" prefHeight="41.0" prefWidth="129.0" text="Salary Declaration" underline="true">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
@@ -18,12 +18,12 @@
       <Label layoutX="50.0" layoutY="163.0" text="Employee Name" />
       <Label layoutX="50.0" layoutY="211.0" text="Contact Number" />
       <Label layoutX="51.0" layoutY="251.0" text="Recruited Department" />
-      <ComboBox layoutX="208.0" layoutY="116.0" prefWidth="150.0" />
-      <TextField editable="false" layoutX="208.0" layoutY="158.0" />
-      <TextField editable="false" layoutX="208.0" layoutY="206.0" />
-      <TextField editable="false" layoutX="208.0" layoutY="246.0" />
-      <TextField layoutX="115.0" layoutY="319.0" />
-      <Label layoutX="51.0" layoutY="324.0" text="Salary" />
-      <Button layoutX="226.0" layoutY="383.0" mnemonicParsing="false" text="Declare Salary" />
+      <ComboBox fx:id="empIDComboBox" layoutX="208.0" layoutY="116.0" onAction="#employeeIDComboBoxOnMouseClick" prefWidth="150.0" />
+      <TextField fx:id="empNameTextField" editable="false" layoutX="208.0" layoutY="158.0" />
+      <TextField fx:id="contactNumTextField" editable="false" layoutX="208.0" layoutY="206.0" />
+      <TextField fx:id="recruitedDeptTextField" editable="false" layoutX="208.0" layoutY="246.0" />
+      <TextField fx:id="salaryTextField" layoutX="208.0" layoutY="309.0" />
+      <Label layoutX="140.0" layoutY="314.0" text="Salary" />
+      <Button layoutX="226.0" layoutY="383.0" mnemonicParsing="false" onAction="#declareSalaryButtonOnMouseClick" text="Declare Salary" />
    </children>
 </AnchorPane>

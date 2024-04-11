@@ -4,9 +4,11 @@
  */
 package hrExecutive_User3;
 
+import accountant_User4.FeedBack;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
@@ -94,14 +96,14 @@ public class HRExecutive extends User implements Serializable {
     
     }
     
-    public static void addInterntoList(Intern intern, String employeeFile){
+    public static void addInterntoList(Intern intern, String internFile){
         
-        ArrayList<Intern> fullInternList = loadInternList(employeeFile);
+        ArrayList<Intern> fullInternList = loadInternList(internFile);
         fullInternList.add(intern);
         
         try{
             
-            FileOutputStream fos = new FileOutputStream(employeeFile);
+            FileOutputStream fos = new FileOutputStream(internFile);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             
             for(Intern internss : fullInternList){
@@ -113,6 +115,77 @@ public class HRExecutive extends User implements Serializable {
             e.printStackTrace();
         }
 
+    }
+    
+    public static void addSalaryIncrementDataToList(Incrementation incrementation, String increFile){
+        
+        ArrayList<Incrementation> fullList = loadSalaryIncrementDataFromList(increFile);
+        fullList.add(incrementation);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(increFile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(Incrementation internss : fullList){
+                oos.writeObject(internss);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    
+    public static ArrayList<Incrementation> loadSalaryIncrementDataFromList(String increFile){
+        ArrayList<Incrementation> incrementList = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(increFile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Incrementation increm = (Incrementation) ois.readObject();
+                    incrementList.add(increm);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return incrementList;
+       
+   }
+    
+    public static int[] employeeRatioData(){
+        
+        ArrayList <Employee> emp = loadEmployeeList("EmployeeObject.bin");
+        
+        int total = emp.size();
+        int[] count = new int[5];
+        
+        for (Employee e : emp){
+            
+            String caseType = e.getAssignedDept();
+            
+            if(caseType.equals("Manufacturing Machine Operator")){
+                count[0]++;
+            }else if(caseType.equals("Accountant")){
+                count[1]++;
+            }else if(caseType.equals("HR executive")){
+                count[2]++;
+            }else if(caseType.equals("Sales Officer")){
+                count[3]++;
+            }else if(caseType.equals("Production Manager")){
+                count[4]++;
+            }
+        }
+        return count;    
     }
 
 }
