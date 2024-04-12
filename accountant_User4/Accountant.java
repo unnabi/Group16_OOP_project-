@@ -72,4 +72,51 @@ public class Accountant extends User implements Serializable{
     
     
     }
+    
+    public static ArrayList<Salary> loadSalaryDeclarationDataFromFile(String fileName){
+        
+        ArrayList<Salary> salaryData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Salary data = (Salary) ois.readObject();
+                    salaryData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return salaryData;
+    
+    
+    }
+    
+       public static void storeSalaryDeclarationDataToFile(Salary salary, String fileN) throws IOException{
+        ArrayList<Salary> salaryData = loadSalaryDeclarationDataFromFile(fileN);
+        salaryData.add(salary);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(Salary s : salaryData){
+                oos.writeObject(s);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
 }

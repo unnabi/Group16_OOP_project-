@@ -4,11 +4,13 @@
  */
 package accountant_User4;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Dell
  */
-public class Salary {
+public class Salary implements Serializable{
     private int id, ContactNum, salary;
     private String name, recruitedDept,paymentStatus;
 

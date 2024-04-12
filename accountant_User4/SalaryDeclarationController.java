@@ -6,6 +6,7 @@ package accountant_User4;
 
 import hrExecutive_User3.Employee;
 import hrExecutive_User3.HRExecutive;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
@@ -13,6 +14,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
@@ -34,6 +36,8 @@ public class SalaryDeclarationController implements Initializable {
     @FXML
     private TextField salaryTextField;
     
+    Alert alert;
+    
     
 
     /**
@@ -53,7 +57,31 @@ public class SalaryDeclarationController implements Initializable {
     }    
 
     @FXML
-    private void declareSalaryButtonOnMouseClick(ActionEvent event) {
+    private void declareSalaryButtonOnMouseClick(ActionEvent event) throws IOException {
+        
+        if(empIDComboBox.getValue() == null || salaryTextField.getText().isEmpty()){
+            
+            alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Warning Alert");
+            alert.setContentText("Please select Employee ID or Declare Salary");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+        
+        }
+        else{
+            
+            Salary salary = new Salary(empIDComboBox.getValue(),Integer.parseInt(contactNumTextField.getText()),
+                Integer.parseInt(salaryTextField.getText()), empNameTextField.getText(), recruitedDeptTextField.getText());
+            
+            Accountant.storeSalaryDeclarationDataToFile(salary, "EmployeeSalaryData.bin");
+            
+            alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setContentText("Salary Declared Successfully!");
+            alert.setHeaderText(null);
+            alert.showAndWait();
+        
+        }
         
     }
     @FXML
