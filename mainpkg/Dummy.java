@@ -4,23 +4,23 @@
  */
 package mainpkg;
 
-import javafx.scene.control.ComboBox;
-
 /**
  *
  * @author Asus
  */
-public class Discount {
- private String productName;
+public class Dummy {
+     private String productName;
     private float unitPrice;
     private int  quantity;
-    private int percentageDiscount;
+    private int percentageDiscount;    
+     private float totalPrice;
 
-    public Discount(String productName, float unitPrice, int quantity, int percentageDiscount) {
+    public Dummy(String productName, float unitPrice, int quantity, int percentageDiscount, float totalPrice) {
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;
         this.percentageDiscount = percentageDiscount;
+        this.totalPrice = totalPrice;
     }
 
     public String getProductName() {
@@ -39,6 +39,10 @@ public class Discount {
         return percentageDiscount;
     }
 
+    public float getTotalPrice() {
+        return totalPrice;
+    }
+
     public void setProductName(String productName) {
         this.productName = productName;
     }
@@ -54,18 +58,14 @@ public class Discount {
     public void setPercentageDiscount(int percentageDiscount) {
         this.percentageDiscount = percentageDiscount;
     }
-    public float getTotalPrice(){
-    float totalPrice=(this.unitPrice*this.percentageDiscount)/100f;
-    return totalPrice*quantity;
-}
-    
+
+    public void setTotalPrice(float totalPrice) {
+        this.totalPrice = totalPrice;
+    }
 
     @Override
     public String toString() {
-        return "Discount{" + "productName=" + productName + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", percentageDiscount=" + percentageDiscount + '}';
+        return "Dummy{" + "productName=" + productName + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", percentageDiscount=" + percentageDiscount + ", totalPrice=" + totalPrice + '}';
     }
-
-   
-    
     
 }

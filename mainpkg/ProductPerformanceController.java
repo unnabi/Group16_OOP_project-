@@ -6,6 +6,7 @@ package mainpkg;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -29,20 +30,38 @@ public class ProductPerformanceController implements Initializable {
     @FXML
     private TextField productRatingOnClick;
     @FXML
-    private ComboBox<?> comboBoxOnClick;
+    private ComboBox<String> comboBoxOnClick;
     @FXML
     private TextArea textAreaOnClick;
+    @FXML
+    private TextField productIdOnClick;
+    private TextField productNameOnClick;
+    private ArrayList<PerformaneRating>perrat=new ArrayList<>();
+    @FXML
+    private ComboBox<String> productNameComboBoxOnClock;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         productNameComboBoxOnClock.getItems().addAll("Tiles","Bone China","Glass","Porcelain");
         // TODO
     }    
 
     @FXML
     private void generateRatingButtonOnClick(ActionEvent event) {
+        //String ProductName = productNameOnClick.getText();
+        String ProductId= productIdOnClick.getText();
+        String ProductName = productNameComboBoxOnClock.getValue();
+       String ProductRating =productRatingOnClick.getText();
+        
+        PerformaneRating newstudent= new PerformaneRating (ProductId, ProductName,ProductRating);
+        
+       comboBoxOnClick.getItems().add(ProductId);
+        
+       perrat.add(newstudent);
+        
     }
 
     @FXML
@@ -58,6 +77,21 @@ public class ProductPerformanceController implements Initializable {
 
         currentStage.setScene(newScene);
         currentStage.show();
+    }
+
+    @FXML
+    private void showRatingButtonOnClick(ActionEvent event) {
+         
+        String selectedId= comboBoxOnClick.getValue();
+        for (PerformaneRating rat :perrat){
+            if (rat.getProductId()==selectedId){
+                textAreaOnClick.setText("Id: " +rat.getProductId() + "\nname:" + rat. getProductName() + "\nRating:" + rat.getProductRating());
+            break;
+              
+            }
+            
+            
+        }
     }
     
 }

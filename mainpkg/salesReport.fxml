@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="649.0" prefWidth="742.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.SalesReportController">
    <children>
-      <ComboBox fx:id="selectProductOnClickCB" layoutX="177.0" layoutY="58.0" onAction="#selectProductOnButtonClick" prefHeight="31.0" prefWidth="357.0" />
+      <ComboBox fx:id="productNameOnClickCB" layoutX="177.0" layoutY="58.0" onAction="#selectProductOnButtonClick" prefHeight="31.0" prefWidth="357.0" />
       <TextField fx:id="unitPriceOnClick" layoutX="177.0" layoutY="123.0" prefHeight="31.0" prefWidth="357.0" />
       <ComboBox fx:id="quantityOnClickCBFField" layoutX="184.0" layoutY="186.0" prefHeight="31.0" prefWidth="350.0" />
       <TextField fx:id="vatOnClick" layoutX="184.0" layoutY="256.0" prefHeight="31.0" prefWidth="273.0" />

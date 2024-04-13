@@ -25,7 +25,7 @@
             <TableColumn fx:id="totalPriceTableViewOnClick" prefWidth="283.0" text="TotalPrice" />
          </columns>
       </TableView>
-      <ComboBox fx:id="selectProductOnClickCB" layoutX="150.0" layoutY="56.0" onAction="#productButtonOnClick" prefHeight="31.0" prefWidth="402.0" />
+      <ComboBox fx:id="productNameOnClickCB" layoutX="150.0" layoutY="56.0" onAction="#productButtonOnClick" prefHeight="31.0" prefWidth="402.0" />
       <ComboBox fx:id="quantityOnClickCB" layoutX="155.0" layoutY="174.0" prefHeight="31.0" prefWidth="402.0" />
       <Label layoutX="44.0" layoutY="245.0" text="PercentageOf Discount" />
       <TextField fx:id="percentageDiscountOnClick" layoutX="218.0" layoutY="240.0" prefHeight="31.0" prefWidth="353.0" />
