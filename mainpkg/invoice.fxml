@@ -12,12 +12,11 @@
 
 <AnchorPane id="AnchorPane" prefHeight="692.0" prefWidth="879.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.InvoiceController">
    <children>
-      <Label layoutX="72.0" layoutY="105.0" text="Product ID" />
-      <Label layoutX="72.0" layoutY="177.0" text="ProductName" />
+      <Label layoutX="83.0" layoutY="165.0" text="Product ID" />
+      <Label layoutX="80.0" layoutY="82.0" text="ProductName" />
       <Label layoutX="71.0" layoutY="246.0" text="InstituteName" />
       <Button layoutX="363.0" layoutY="386.0" mnemonicParsing="false" onAction="#generateInvoiceButtonOnClick" prefHeight="31.0" prefWidth="319.0" text="LoadButton" />
-      <TextField fx:id="productIdOnClick" layoutX="214.0" layoutY="89.0" prefHeight="31.0" prefWidth="551.0" />
-      <TextField fx:id="productNameOnClick" layoutX="214.0" layoutY="161.0" prefHeight="31.0" prefWidth="551.0" />
+      <TextField fx:id="productIdOnClick" layoutX="214.0" layoutY="160.0" prefHeight="31.0" prefWidth="551.0" />
       <TextField fx:id="instituteNameOnClick" layoutX="214.0" layoutY="230.0" prefHeight="31.0" prefWidth="562.0" />
       <Text layoutX="426.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="InVoice">
          <font>
@@ -30,5 +29,6 @@
       <ComboBox fx:id="comboBoxOnClick" layoutX="34.0" layoutY="394.0" prefWidth="150.0" />
       <TextArea fx:id="textAreaOnClick" layoutX="54.0" layoutY="433.0" prefHeight="200.0" prefWidth="741.0" />
       <Button layoutX="407.0" layoutY="647.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="132.0" text="Back" />
+      <ComboBox fx:id="productNameCBClick" layoutX="214.0" layoutY="77.0" prefHeight="31.0" prefWidth="551.0" />
    </children>
 </AnchorPane>

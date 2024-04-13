@@ -6,6 +6,7 @@ package mainpkg;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,12 +26,9 @@ import javafx.stage.Stage;
  */
 public class FeedbackClientController implements Initializable {
 
+     private ArrayList<FeedBack> fdbck = new ArrayList<>();
     @FXML
-    private TextField clientIdOnClick;
-    @FXML
-    private TextField clientCommentOnClick;
-    @FXML
-    private TextField productNameOnClick;
+    private TextArea textAreaOnClick;
 
     /**
      * Initializes the controller class.
@@ -41,12 +39,40 @@ public class FeedbackClientController implements Initializable {
     }    
 
     @FXML
-    private void viewFeedbackButtonOnClick(ActionEvent event) {
+    private void viewFeedbackButtonOnClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("feedbackNextPage.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene newScene = new Scene(parent);
+
+        currentStage.setScene(newScene);
+        currentStage.show();
+        
+        
     }
 
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SalesOfficerDashboard_1.fxml"));
+        Parent parent = loader.load();
+
+        
+        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+
+        Scene newScene = new Scene(parent);
+
+        currentStage.setScene(newScene);
+        currentStage.show();
+    }
+
+    @FXML
+    private void nextpageButtonOnClick(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("feedBackSubmission.fxml"));
         Parent parent = loader.load();
 
         

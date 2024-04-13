@@ -6,6 +6,8 @@ package mainpkg;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -30,32 +32,52 @@ public class InvoiceController implements Initializable {
     @FXML
     private TextField productIdOnClick;
     @FXML
-    private TextField productNameOnClick;
-    @FXML
     private TextField instituteNameOnClick;
     @FXML
     private DatePicker dateInvoiceOnClick;
     @FXML
-    private ComboBox<?> comboBoxOnClick;
+    private ComboBox<String> comboBoxOnClick;
     @FXML
     private TextArea textAreaOnClick;
+    @FXML
+    private ComboBox<String> productNameCBClick;
+    private ArrayList<Invoice>ivce=new ArrayList<>();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        productNameCBClick.getItems().addAll("Tiles","Bone China","Glass","Porcelain");
         // TODO
     }    
 
     @FXML
-    private void generateInvoiceButtonOnClick(ActionEvent event) {
+    private void generateInvoiceButtonOnClick(ActionEvent event) throws IOException {
+         String selectedId= comboBoxOnClick.getValue();
+        for (Invoice st :ivce){
+            if (st. getProductId()==selectedId){
+               textAreaOnClick.setText("ProductName: " + st.getProductName() + "\nmonth:" + st.getProductId() + "\targetSold:" + st. getInstituteName() + 
+                       "SoldProduct:" 
+                       + st.getDateInvoice());
+            break;
     }
-
+        }
+    }
     @FXML
-    private void selectIdButtonOnClick(ActionEvent event) {
-    }
-
+   private void selectIdButtonOnClick(ActionEvent event) throws IOException {
+        String ProductName =productNameCBClick.getValue();
+        String productId= productIdOnClick.getText();
+         String InstituteName=instituteNameOnClick.getText();
+         LocalDate  DateInvoice=dateInvoiceOnClick.getValue();
+        Invoice newstudent= new Invoice(productId, ProductName,InstituteName, DateInvoice);
+        
+       comboBoxOnClick.getItems().add(productId);
+        
+       ivce.add(newstudent);
+        
+        }           
+   
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("SalesOfficerDashboard_1.fxml"));
@@ -70,5 +92,5 @@ public class InvoiceController implements Initializable {
         currentStage.setScene(newScene);
         currentStage.show();
     }
-    
-}
+}    
+
