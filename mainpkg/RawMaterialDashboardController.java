@@ -32,8 +32,8 @@ public class RawMaterialDashboardController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       comboBoxOnClick.getItems().addAll("OrderProduct","Delivery Product","Return product",
-                "Product Cost");
+       comboBoxOnClick.getItems().addAll("Product Order","Delivery Product","Return product",
+                "Product Cost","Available Product","Material Instruction","Catalog","Update Location");
     }    
 
     @FXML
@@ -41,7 +41,7 @@ public class RawMaterialDashboardController implements Initializable {
         String a=comboBoxOnClick.getValue().toString();
         Parent sceneA = null;
         
-        if(a=="OrderProduct"){
+        if(a=="Product Order"){
             sceneA=FXMLLoader.load(getClass().getResource("orderProduct.fxml"));   
             
         }
@@ -54,6 +54,23 @@ public class RawMaterialDashboardController implements Initializable {
         }
          else if(a=="Product Cost"){
              sceneA=FXMLLoader.load(getClass().getResource("costMaterial.fxml"));   
+        }
+        
+        else if(a=="Available Product"){
+             sceneA=FXMLLoader.load(getClass().getResource("Availability.fxml"));
+             
+        }
+        else if(a=="Material Instruction"){
+              sceneA=FXMLLoader.load(getClass().getResource("InstructionMaterial.fxml"));
+        }
+        
+       
+        else if(a=="Catalog"){
+              sceneA=FXMLLoader.load(getClass().getResource("MaterialCatalog.fxml"));
+        }
+        
+        else if(a=="Update Location"){
+              sceneA=FXMLLoader.load(getClass().getResource("trackLocation.fxml"));
         }
         
         

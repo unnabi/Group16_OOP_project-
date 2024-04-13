@@ -10,7 +10,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 /**
@@ -18,18 +17,14 @@ import javafx.scene.control.TextField;
  *
  * @author Asus
  */
-public class OrderProductController implements Initializable {
+public class AvailabilityController implements Initializable {
 
-    @FXML
-    private TextField productNameOnClick;
     @FXML
     private TextField productIdOnClick;
     @FXML
-    private TextField barcodeOnClick;
+    private TextField quantityOnClick;
     @FXML
-    private ComboBox<?> quantityOnClickCB;
-    @FXML
-    private TextArea textAreaOnClick;
+    private ComboBox<String> productNameOnClick;
 
     /**
      * Initializes the controller class.
@@ -40,15 +35,7 @@ public class OrderProductController implements Initializable {
     }    
 
     @FXML
-    private void viewProductButtonOnClick(ActionEvent event) {
-    }
-
-    @FXML
-    private void readFileButtonOnClick(ActionEvent event) {
-    }
-
-    @FXML
-    private void backButtonOnClick(ActionEvent event) {
+    private void checkAvailabilityButtonOnClick(ActionEvent event) {
     }
     
 }

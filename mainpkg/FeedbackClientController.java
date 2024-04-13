@@ -31,8 +31,6 @@ public class FeedbackClientController implements Initializable {
     private TextField clientCommentOnClick;
     @FXML
     private TextField productNameOnClick;
-    @FXML
-    private TextArea textAreaOnClick;
 
     /**
      * Initializes the controller class.

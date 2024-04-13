@@ -10,30 +10,25 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="693.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.OrderProductController">
+<AnchorPane id="AnchorPane" prefHeight="680.0" prefWidth="848.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.OrderProductController">
    <children>
-      <AnchorPane id="AnchorPane" layoutY="-2.0" prefHeight="693.0" prefWidth="859.0" style="-fx-background-color: yellow;">
-         <children>
-            <Label layoutX="66.0" layoutY="101.0" text="productName" />
-            <Label layoutX="66.0" layoutY="176.0" text="product ID" />
-            <Label layoutX="66.0" layoutY="272.0" text="barcode" />
-            <Label layoutX="76.0" layoutY="369.0" text="quantity" />
-            <TextField fx:id="productNameOnClick" layoutX="192.0" layoutY="96.0" prefHeight="31.0" prefWidth="372.0" />
-            <TextField fx:id="productIdOnClick" layoutX="192.0" layoutY="182.0" prefHeight="31.0" prefWidth="372.0" />
-            <TextField fx:id="barcodeOnClick" layoutX="192.0" layoutY="278.0" prefHeight="31.0" prefWidth="372.0" />
-            <ComboBox fx:id="quantityOnClickCB" layoutX="192.0" layoutY="364.0" prefHeight="31.0" prefWidth="380.0" />
-            <Button layoutX="217.0" layoutY="456.0" mnemonicParsing="false" onAction="#viewProductButtonOnClick" prefHeight="31.0" prefWidth="303.0" text="View Product" />
-            <Line endX="653.0" layoutX="104.0" layoutY="431.0" startX="-100.0" />
-            <ComboBox fx:id="comboBoxOnClick" layoutX="21.0" layoutY="500.0" prefHeight="31.0" prefWidth="427.0" />
-            <Button layoutX="616.0" layoutY="441.0" mnemonicParsing="false" onAction="#checkAvailability" prefHeight="31.0" prefWidth="201.0" text="View Available" />
-            <TextArea fx:id="textAreaOnClick" layoutX="575.0" layoutY="62.0" prefHeight="358.0" prefWidth="242.0" />
-            <Button layoutX="336.0" layoutY="584.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="136.0" text="Back" />
-            <Text layoutX="273.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OrderProduct">
-               <font>
-                  <Font name="System Bold Italic" size="43.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
+      <Label layoutX="66.0" layoutY="101.0" text="productName" />
+      <Label layoutX="66.0" layoutY="176.0" text="product ID" />
+      <Label layoutX="66.0" layoutY="272.0" text="barcode" />
+      <Label layoutX="76.0" layoutY="369.0" text="quantity" />
+      <TextField fx:id="productNameOnClick" layoutX="192.0" layoutY="96.0" prefHeight="31.0" prefWidth="372.0" />
+      <TextField fx:id="productIdOnClick" layoutX="192.0" layoutY="182.0" prefHeight="31.0" prefWidth="372.0" />
+      <TextField fx:id="barcodeOnClick" layoutX="192.0" layoutY="278.0" prefHeight="31.0" prefWidth="372.0" />
+      <ComboBox fx:id="quantityOnClickCB" layoutX="192.0" layoutY="364.0" prefHeight="31.0" prefWidth="380.0" />
+      <Button layoutX="104.0" layoutY="456.0" mnemonicParsing="false" onAction="#viewProductButtonOnClick" prefHeight="31.0" prefWidth="416.0" text="orderProduct write file" />
+      <Line endX="653.0" layoutX="104.0" layoutY="431.0" startX="-100.0" />
+      <Button layoutX="616.0" layoutY="441.0" mnemonicParsing="false" onAction="#readFileButtonOnClick" prefHeight="31.0" prefWidth="201.0" text="product Read file" />
+      <TextArea fx:id="textAreaOnClick" layoutX="575.0" layoutY="62.0" prefHeight="358.0" prefWidth="242.0" />
+      <Button layoutX="336.0" layoutY="584.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="136.0" text="Back" />
+      <Text layoutX="273.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OrderProduct">
+         <font>
+            <Font name="System Bold Italic" size="43.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

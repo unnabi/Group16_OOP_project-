@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mainpkg;
 
@@ -9,75 +9,57 @@ package mainpkg;
  * @author Asus
  */
 public class Forecast {
-    private String productname;
-    private String month;
-    private int salesforecast;
-    private int totalsale;
+    private String ProductName;
+    private String Month;
+    private String SalesForecast;
+    private String TotalSaleProduct;
 
     public Forecast() {
     }
 
-    public Forecast(String productname, String month, int salesforecast, int totalsale) {
-        this.productname = productname;
-        this.month = month;
-        this.salesforecast = salesforecast;
-        this.totalsale = totalsale;
+    public Forecast(String ProductName, String Month, String SalesForecast, String TotalSaleProduct) {
+        this.ProductName = ProductName;
+        this.Month = Month;
+        this.SalesForecast = SalesForecast;
+        this.TotalSaleProduct = TotalSaleProduct;
     }
 
-    public String getProductname() {
-        return productname;
+    public String getProductName() {
+        return ProductName;
     }
 
     public String getMonth() {
-        return month;
+        return Month;
     }
 
-    public int getSalesforecast() {
-        return salesforecast;
+    public String getSalesForecast() {
+        return SalesForecast;
     }
 
-    public int getTotalsale() {
-        return totalsale;
+    public String getTotalSaleProduct() {
+        return TotalSaleProduct;
     }
 
-    public void setProductname(String productname) {
-        this.productname = productname;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
-    public void setMonth(String month) {
-        this.month = month;
+    public void setMonth(String Month) {
+        this.Month = Month;
     }
 
-    public void setSalesforecast(int salesforecast) {
-        this.salesforecast = salesforecast;
+    public void setSalesForecast(String SalesForecast) {
+        this.SalesForecast = SalesForecast;
     }
 
-    public void setTotalsale(int totalsale) {
-        this.totalsale = totalsale;
+    public void setTotalSaleProduct(String TotalSaleProduct) {
+        this.TotalSaleProduct = TotalSaleProduct;
     }
-public float getDifferenceSale(){
-     float salesDiff=((this.salesforecast)-(this.totalsale));
-      return salesDiff;
-}
+
     @Override
     public String toString() {
-        return "Forecast{" + "productname=" + productname + ", month=" + month + ", salesforecast=" + salesforecast + ", totalsale=" + totalsale + '}';
+        return "Forecast{" + "ProductName=" + ProductName + ", Month=" + Month + ", SalesForecast=" + SalesForecast + ", TotalSaleProduct=" + TotalSaleProduct + '}';
     }
     
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-
-    float getSalesDiff() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    void submitReport() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
     
 }

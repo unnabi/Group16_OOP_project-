@@ -5,6 +5,7 @@
 package mainpkg;
 
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,11 +15,11 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class Main_1 extends Application {
+public class User_6 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("SalesOfficerDashboard_1.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("RawMaterialDashboard.fxml"));
         
         Scene scene = new Scene(root);
         

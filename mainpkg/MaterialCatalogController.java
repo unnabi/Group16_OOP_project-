@@ -18,18 +18,18 @@ import javafx.scene.control.TextField;
  *
  * @author Asus
  */
-public class OrderProductController implements Initializable {
+public class MaterialCatalogController implements Initializable {
 
     @FXML
-    private TextField productNameOnClick;
+    private ComboBox<?> comboBoxOnClick;
+    @FXML
+    private TextArea textAreaOnClick;
     @FXML
     private TextField productIdOnClick;
     @FXML
-    private TextField barcodeOnClick;
+    private TextField manufactureDateOnClick;
     @FXML
-    private ComboBox<?> quantityOnClickCB;
-    @FXML
-    private TextArea textAreaOnClick;
+    private TextField ExpireDateOnClick;
 
     /**
      * Initializes the controller class.
@@ -40,15 +40,15 @@ public class OrderProductController implements Initializable {
     }    
 
     @FXML
-    private void viewProductButtonOnClick(ActionEvent event) {
+    private void addButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void readFileButtonOnClick(ActionEvent event) {
+    private void checkCatalogButtonOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void backButtonOnClick(ActionEvent event) {
+    private void goBackButtonOnClick(ActionEvent event) {
     }
     
 }

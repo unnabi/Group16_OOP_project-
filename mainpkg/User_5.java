@@ -14,11 +14,11 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class Main_2 extends Application {
+public class User_5 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("RawMaterialDashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("SalesOfficerDashboard_1.fxml"));
         
         Scene scene = new Scene(root);
         
