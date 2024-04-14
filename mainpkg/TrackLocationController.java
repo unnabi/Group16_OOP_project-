@@ -14,7 +14,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
 /**
@@ -22,10 +21,7 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class InstructionMaterialController implements Initializable {
-
-    @FXML
-    private TextArea textAreaOnClick;
+public class TrackLocationController implements Initializable {
 
     /**
      * Initializes the controller class.
@@ -34,22 +30,6 @@ public class InstructionMaterialController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void viewInstructionButtonOnClick(ActionEvent event) throws IOException {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("instructionNexPage.fxml"));
-        Parent parent = loader.load();
-
-        
-        Stage currentStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
-
-        Scene newScene = new Scene(parent);
-
-        currentStage.setScene(newScene);
-        currentStage.show();
-        
-    }
 
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {

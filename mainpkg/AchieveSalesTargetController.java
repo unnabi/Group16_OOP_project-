@@ -117,8 +117,8 @@ public class AchieveSalesTargetController implements Initializable {
        String selectedName=  productNameOnClickCB.getValue();
         for (Target st :tgList){
             if (st.getProductName()==selectedName){
-               textAreaOnClick.setText("ProductName: " + st.getProductName() + "\nmonth:" + st.getMonth() + "\targetSold:" + st. getTargetSold() + 
-                       "SoldProduct:" 
+               textAreaOnClick.setText("ProductName: " + st.getProductName() + "\nmonth:" + st.getMonth() + "\ntargetSold:" + st. getTargetSold() + 
+                       "\nSoldProduct:" 
                        + st.getSoldProduct());
             break;
               

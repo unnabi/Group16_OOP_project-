@@ -8,14 +8,14 @@ package mainpkg;
  *
  * @author Asus
  */
-public class Dummy {
+public class DiscountPolicy {
      private String productName;
     private float unitPrice;
     private int  quantity;
     private int percentageDiscount;    
      private float totalPrice;
 
-    public Dummy(String productName, float unitPrice, int quantity, int percentageDiscount, float totalPrice) {
+    public DiscountPolicy(String productName, float unitPrice, int quantity, int percentageDiscount, float totalPrice) {
         this.productName = productName;
         this.unitPrice = unitPrice;
         this.quantity = quantity;

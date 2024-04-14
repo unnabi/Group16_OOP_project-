@@ -57,8 +57,8 @@ public class InvoiceController implements Initializable {
          String selectedId= comboBoxOnClick.getValue();
         for (Invoice st :ivce){
             if (st. getProductId()==selectedId){
-               textAreaOnClick.setText("ProductName: " + st.getProductName() + "\nmonth:" + st.getProductId() + "\targetSold:" + st. getInstituteName() + 
-                       "SoldProduct:" 
+               textAreaOnClick.setText("ProductName: " + st.getProductName() + "\nProductId:" + st.getProductId() + "\nInstituteName:" + st. getInstituteName() + 
+                       "\nDate:" 
                        + st.getDateInvoice());
             break;
     }

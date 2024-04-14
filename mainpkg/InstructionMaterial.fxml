@@ -13,8 +13,8 @@
             <Font size="43.0" />
          </font>
       </Text>
-      <Button layoutX="80.0" layoutY="133.0" mnemonicParsing="false" onAction="#viewInstructionButtonOnClick" text="View Instruction" />
-      <TextArea fx:id="textAreaOnClick" layoutX="31.0" layoutY="181.0" prefHeight="353.0" prefWidth="751.0" style="-fx-background-color: gray; -fx-background-color: yellow;" />
-      <Button layoutX="69.0" layoutY="590.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="346.0" text="Back" />
+      <Button layoutX="43.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewInstructionButtonOnClick" text="View Instruction" />
+      <Button layoutX="43.0" layoutY="602.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="346.0" text="Back" />
+      <TextArea fx:id="textAreaOnClick" layoutX="49.0" layoutY="192.0" prefHeight="371.0" prefWidth="766.0" />
    </children>
 </AnchorPane>

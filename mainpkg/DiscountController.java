@@ -32,17 +32,17 @@ public class DiscountController implements Initializable {
     @FXML
     private TextField unitPriceOnClick;
     @FXML
-    private TableView<Dummy> tableViewOnClick;
+    private TableView<DiscountPolicy> tableViewOnClick;
     @FXML
-    private TableColumn<Dummy, String> productNameOnTableViewClick;
+    private TableColumn<DiscountPolicy, String> productNameOnTableViewClick;
     @FXML
-    private TableColumn<Dummy, String> unitPriceOnTableClick;
+    private TableColumn<DiscountPolicy, String> unitPriceOnTableClick;
     @FXML
-    private TableColumn<Dummy, String> quantityTableViewOnClick;
+    private TableColumn<DiscountPolicy, String> quantityTableViewOnClick;
     @FXML
-    private TableColumn<Dummy, String> discountTableViewOnClick;
+    private TableColumn<DiscountPolicy, String> discountTableViewOnClick;
     @FXML
-    private TableColumn<Dummy, String> totalPriceTableViewOnClick;
+    private TableColumn<DiscountPolicy, String> totalPriceTableViewOnClick;
     @FXML
     private ComboBox<Integer> quantityOnClickCB;
     @FXML
@@ -64,7 +64,7 @@ public class DiscountController implements Initializable {
     private void generateDiscountTableButtonOnClick(ActionEvent event) {
         for(Discount c:disList){
           tableViewOnClick.getItems().add(
-                new Dummy(c.getProductName(),c.getUnitPrice(),c.getQuantity(),
+                new DiscountPolicy(c.getProductName(),c.getUnitPrice(),c.getQuantity(),
                         c.getPercentageDiscount(),  c.getTotalPrice())
          );
           
