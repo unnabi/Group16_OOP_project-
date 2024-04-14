@@ -9,73 +9,74 @@ package mainpkg;
  * @author Asus
  */
 public class DummySalesReport {
-    private String productName;
-    private float unitPrice;
-    private int vat;
-    private int quantity;
-    private float totalvat;
-    private float totalAmount;
+    private String ProductName;
+    private float UnitPrice;
+    private int Vat;
+    private int Quantity;
+    private float TotalVat;
+    private float TotalAmount;
 
-    public DummySalesReport(String productName, float unitPrice, int vat, int quantity, float totalvat, float totalAmount) {
-        this.productName = productName;
-        this.unitPrice = unitPrice;
-        this.vat = vat;
-        this.quantity = quantity;
-        this.totalvat = totalvat;
-        this.totalAmount = totalAmount;
+    public DummySalesReport(String ProductName, float UnitPrice, int Vat, int Quantity, float TotalVat, float TotalAmount) {
+        this.ProductName = ProductName;
+        this.UnitPrice = UnitPrice;
+        this.Vat = Vat;
+        this.Quantity = Quantity;
+        this.TotalVat = TotalVat;
+        this.TotalAmount = TotalAmount;
     }
 
     public String getProductName() {
-        return productName;
+        return ProductName;
     }
 
     public float getUnitPrice() {
-        return unitPrice;
+        return UnitPrice;
     }
 
     public int getVat() {
-        return vat;
+        return Vat;
     }
 
     public int getQuantity() {
-        return quantity;
+        return Quantity;
     }
 
-    public float getTotalvat() {
-        return totalvat;
+    public float getTotalVat() {
+        return TotalVat;
     }
 
     public float getTotalAmount() {
-        return totalAmount;
+        return TotalAmount;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
-    public void setUnitPrice(float unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setUnitPrice(float UnitPrice) {
+        this.UnitPrice = UnitPrice;
     }
 
-    public void setVat(int vat) {
-        this.vat = vat;
+    public void setVat(int Vat) {
+        this.Vat = Vat;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
     }
 
-    public void setTotalvat(float totalvat) {
-        this.totalvat = totalvat;
+    public void setTotalVat(float TotalVat) {
+        this.TotalVat = TotalVat;
     }
 
-    public void setTotalAmount(float totalAmount) {
-        this.totalAmount = totalAmount;
+    public void setTotalAmount(float TotalAmount) {
+        this.TotalAmount = TotalAmount;
     }
 
     @Override
     public String toString() {
-        return "DummySalesReport{" + "productName=" + productName + ", unitPrice=" + unitPrice + ", vat=" + vat + ", quantity=" + quantity + ", totalvat=" + totalvat + ", totalAmount=" + totalAmount + '}';
+        return "DummySalesReport{" + "ProductName=" + ProductName + ", UnitPrice=" + UnitPrice + ", Vat=" + Vat + ", Quantity=" + Quantity + ", TotalVat=" + TotalVat + ", TotalAmount=" + TotalAmount + '}';
     }
     
 }
+    

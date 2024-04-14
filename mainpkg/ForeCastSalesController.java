@@ -18,7 +18,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
@@ -33,9 +32,9 @@ public class ForeCastSalesController implements Initializable {
     @FXML
     private TextField salesForecastOnClick;
     @FXML
-    private TextField totalSaleProductOnClick;
+    private TextField totalSaleOnClick;
     @FXML
-    private TableView<Forecast> tableViewOnClick;
+    private TableView<Forecast> tableVieewOnClick;
     @FXML
     private TableColumn<Forecast, String> productNameTableOnClick;
     @FXML
@@ -46,22 +45,18 @@ public class ForeCastSalesController implements Initializable {
     private TableColumn<Forecast, String> totalSaleTableOnClick;
     @FXML
     private ComboBox<String> monthComboBoxOnClick;
-    
-    private ArrayList<Forecast>foresale= new ArrayList<>();
     @FXML
     private ComboBox<String> productNameComboBoXOnClick;
-   
+      private ArrayList<Forecast>foresale= new ArrayList<>();
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-         monthComboBoxOnClick.getItems().addAll("January","May","September");
+        monthComboBoxOnClick.getItems().addAll("January","May","September");
          productNameComboBoXOnClick.getItems().addAll("Tiles","Glass","Porcelain","Bonechina");
-       
     }    
-
 
     @FXML
     private void goBackButtonOnClick(ActionEvent event) throws IOException {
@@ -80,53 +75,49 @@ public class ForeCastSalesController implements Initializable {
 
     @FXML
     private void addButtonOnClick(ActionEvent event) {
-        
         Forecast item =new Forecast ( productNameComboBoXOnClick.getValue(),monthComboBoxOnClick.getValue(),
-                 salesForecastOnClick.getText(),totalSaleProductOnClick.getText());
+                Integer.parseInt(salesForecastOnClick.getText()),Integer.parseInt(totalSaleOnClick.getText()));
         
         foresale.add(item);
         
          productNameTableOnClick.setCellValueFactory(new PropertyValueFactory<>("productName"));
         monthTableOnClick.setCellValueFactory(new PropertyValueFactory<>("month"));
         salesForsecastTableOnClick.setCellValueFactory(new PropertyValueFactory<>("salesForsecast"));
-        totalSaleTableOnClick.setCellValueFactory(new PropertyValueFactory<>("totalSaleTable"));
-        
-        
+        totalSaleTableOnClick.setCellValueFactory(new PropertyValueFactory<>("totalSale"));
     }
 
     @FXML
     private void generateForecastButtonClick(ActionEvent event) {
         for(Forecast c:foresale){
-          tableViewOnClick.getItems().add(
-                new Forecast(c.getProductName(),c.getMonth(),
-                        c.getSalesForecast(),c. getTotalSaleProduct())
+          tableVieewOnClick.getItems().add(
+                new Forecast(c.getProductName(),c. getMonth(),
+                        c.getSalesForecast(),c. getTotalSale())
         );  
         
+   }
     }
-    
-}
 
     @FXML
     private void selectProductButtonOnClick(ActionEvent event) {
-        
-      switch (productNameComboBoXOnClick.getValue()){
+        switch (productNameComboBoXOnClick.getValue()){
             case "Tiles":
                 salesForecastOnClick.setText("1200");
-                totalSaleProductOnClick.setText("890");
+                totalSaleOnClick.setText("890");
                 break;
              case "Glass":
                 salesForecastOnClick.setText("1500");
-                totalSaleProductOnClick.setText("790");   
+                totalSaleOnClick.setText("790");   
                break;
               case "Porcelain":
                 salesForecastOnClick.setText("1600");
-               totalSaleProductOnClick.setText("1300");  
+               totalSaleOnClick.setText("1300");  
                 break;
                 
               case "Bonechina":
                 salesForecastOnClick.setText("2200");
-                totalSaleProductOnClick.setText("2100");  
+                totalSaleOnClick.setText("2100");  
                 break;  
         }  
     }
+    
 }

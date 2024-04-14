@@ -9,63 +9,63 @@ package mainpkg;
  * @author Asus
  */
 public class DiscountPolicy {
-     private String productName;
-    private float unitPrice;
-    private int  quantity;
-    private int percentageDiscount;    
-     private float totalPrice;
+     private String ProductName;
+    private float UnitPrice;
+    private int  Quantity;
+    private int PercentageDiscount;    
+    private float TotalPrice;
 
-    public DiscountPolicy(String productName, float unitPrice, int quantity, int percentageDiscount, float totalPrice) {
-        this.productName = productName;
-        this.unitPrice = unitPrice;
-        this.quantity = quantity;
-        this.percentageDiscount = percentageDiscount;
-        this.totalPrice = totalPrice;
+    public DiscountPolicy(String ProductName, float UnitPrice, int Quantity, int PercentageDiscount, float TotalPrice) {
+        this.ProductName = ProductName;
+        this.UnitPrice = UnitPrice;
+        this.Quantity = Quantity;
+        this.PercentageDiscount = PercentageDiscount;
+        this.TotalPrice = TotalPrice;
     }
 
     public String getProductName() {
-        return productName;
+        return ProductName;
     }
 
     public float getUnitPrice() {
-        return unitPrice;
+        return UnitPrice;
     }
 
     public int getQuantity() {
-        return quantity;
+        return Quantity;
     }
 
     public int getPercentageDiscount() {
-        return percentageDiscount;
+        return PercentageDiscount;
     }
 
     public float getTotalPrice() {
-        return totalPrice;
+        return TotalPrice;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
-    public void setUnitPrice(float unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setUnitPrice(float UnitPrice) {
+        this.UnitPrice = UnitPrice;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
     }
 
-    public void setPercentageDiscount(int percentageDiscount) {
-        this.percentageDiscount = percentageDiscount;
+    public void setPercentageDiscount(int PercentageDiscount) {
+        this.PercentageDiscount = PercentageDiscount;
     }
 
-    public void setTotalPrice(float totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setTotalPrice(float TotalPrice) {
+        this.TotalPrice = TotalPrice;
     }
 
     @Override
     public String toString() {
-        return "Dummy{" + "productName=" + productName + ", unitPrice=" + unitPrice + ", quantity=" + quantity + ", percentageDiscount=" + percentageDiscount + ", totalPrice=" + totalPrice + '}';
+        return "DiscountPolicy{" + "ProductName=" + ProductName + ", UnitPrice=" + UnitPrice + ", Quantity=" + Quantity + ", PercentageDiscount=" + PercentageDiscount + ", TotalPrice=" + TotalPrice + '}';
     }
-    
-}
+
+}   

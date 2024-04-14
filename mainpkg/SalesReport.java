@@ -9,62 +9,63 @@ package mainpkg;
  * @author Asus
  */
 public class SalesReport {
-   private String productName;
-    private float unitPrice;
-    private int vat;
-    private int quantity;
+    private String ProductName;
+    private float UnitPrice;
+    private int Vat;
+    private int Quantity;
 
-    public SalesReport(String productName, float unitPrice, int vat, int quantity) {
-        this.productName = productName;
-        this.unitPrice = unitPrice;
-        this.vat = vat;
-        this.quantity = quantity;
+    public SalesReport(String ProductName, float UnitPrice, int Vat, int Quantity) {
+        this.ProductName = ProductName;
+        this.UnitPrice = UnitPrice;
+        this.Vat = Vat;
+        this.Quantity = Quantity;
     }
 
     public String getProductName() {
-        return productName;
+        return ProductName;
     }
 
     public float getUnitPrice() {
-        return unitPrice;
+        return UnitPrice;
     }
 
     public int getVat() {
-        return vat;
+        return Vat;
     }
 
     public int getQuantity() {
-        return quantity;
+        return Quantity;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
-    public void setUnitPrice(float unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setUnitPrice(float UnitPrice) {
+        this.UnitPrice = UnitPrice;
     }
 
-    public void setVat(int vat) {
-        this.vat = vat;
+    public void setVat(int Vat) {
+        this.Vat = Vat;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(int Quantity) {
+        this.Quantity = Quantity;
     }
-public float getTotalvat(){
-    float totalvat=(this.unitPrice*this.vat)/100f;
-    return totalvat*quantity;
+   public float getTotalvat(){
+    float totalvat=(this.UnitPrice*this.Vat)/100f;
+    return totalvat*Quantity;
 }
     
  public float getTotalAmount(){
-     float totalAmount=(unitPrice*quantity) +  getTotalvat();
+     float totalAmount=(UnitPrice*Quantity) +  getTotalvat();
      return totalAmount;
  }   
+
     @Override
     public String toString() {
-        return "SalesReport{" + "productName=" + productName + ", unitPrice=" + unitPrice + ", vat=" + vat + ", quantity=" + quantity + '}';
+        return "SalesReport{" + "ProductName=" + ProductName + ", UnitPrice=" + UnitPrice + ", Vat=" + Vat + ", Quantity=" + Quantity + '}';
     }
-
     
 }
+    

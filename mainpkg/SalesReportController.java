@@ -45,13 +45,14 @@ public class SalesReportController implements Initializable {
     private TableColumn<DummySalesReport, String> quantityOnTableViewClick;
     @FXML
     private TableColumn<DummySalesReport, String> vatOnTableViewClick;
-    @FXML
-    private TableColumn<DummySalesReport,String > totalvatOnTableViewClick;
+    //private TableColumn<DummySalesReport,String > totalvatOnTableViewClick;
     @FXML
     private TableColumn<DummySalesReport, String> totalAmountOnTableViewClick;
     @FXML
     private ComboBox<String> productNameOnClickCB;
     private ArrayList<SalesReport>sreport=new ArrayList<>();
+    @FXML
+    private TableColumn<DummySalesReport, String> totalVatOnTableViewClick;
 
     /**
      * Initializes the controller class.
@@ -91,10 +92,9 @@ public class SalesReportController implements Initializable {
        unitPriceOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("unitPrice"));
         quantityOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("quantity"));
         vatOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("vat"));
-        totalvatOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("vtotalVat"));
+        totalVatOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("totalVat"));
        totalAmountOnTableViewClick.setCellValueFactory(new PropertyValueFactory<>("totalAmount")); 
-        
-        
+           
     }
 
     @FXML

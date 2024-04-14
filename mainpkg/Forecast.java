@@ -11,17 +11,14 @@ package mainpkg;
 public class Forecast {
     private String ProductName;
     private String Month;
-    private String SalesForecast;
-    private String TotalSaleProduct;
+    private int SalesForecast;
+    private int TotalSale;
 
-    public Forecast() {
-    }
-
-    public Forecast(String ProductName, String Month, String SalesForecast, String TotalSaleProduct) {
+    public Forecast(String ProductName, String Month, int SalesForecast, int TotalSale) {
         this.ProductName = ProductName;
         this.Month = Month;
         this.SalesForecast = SalesForecast;
-        this.TotalSaleProduct = TotalSaleProduct;
+        this.TotalSale = TotalSale;
     }
 
     public String getProductName() {
@@ -32,12 +29,12 @@ public class Forecast {
         return Month;
     }
 
-    public String getSalesForecast() {
+    public int getSalesForecast() {
         return SalesForecast;
     }
 
-    public String getTotalSaleProduct() {
-        return TotalSaleProduct;
+    public int getTotalSale() {
+        return TotalSale;
     }
 
     public void setProductName(String ProductName) {
@@ -48,18 +45,18 @@ public class Forecast {
         this.Month = Month;
     }
 
-    public void setSalesForecast(String SalesForecast) {
+    public void setSalesForecast(int SalesForecast) {
         this.SalesForecast = SalesForecast;
     }
 
-    public void setTotalSaleProduct(String TotalSaleProduct) {
-        this.TotalSaleProduct = TotalSaleProduct;
+    public void setTotalSale(int TotalSale) {
+        this.TotalSale = TotalSale;
     }
 
     @Override
     public String toString() {
-        return "Forecast{" + "ProductName=" + ProductName + ", Month=" + Month + ", SalesForecast=" + SalesForecast + ", TotalSaleProduct=" + TotalSaleProduct + '}';
+        return "Forecast{" + "ProductName=" + ProductName + ", Month=" + Month + ", SalesForecast=" + SalesForecast + ", TotalSale=" + TotalSale + '}';
     }
     
-    
 }
+   

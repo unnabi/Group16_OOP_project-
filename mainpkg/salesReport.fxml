@@ -28,7 +28,7 @@
             <TableColumn fx:id="unitPriceOnTableViewClick" prefWidth="171.0" text="unitPrice" />
             <TableColumn fx:id="quantityOnTableViewClick" prefWidth="116.0" text="quantity" />
             <TableColumn fx:id="vatOnTableViewClick" text="vat" />
-            <TableColumn fx:id="totalvatOnTableViewClick" prefWidth="148.0" text="totalVat" />
+            <TableColumn fx:id="totalVatOnTableViewClick" prefWidth="148.0" text="totalVat" />
             <TableColumn fx:id="totalAmountOnTableViewClick" prefWidth="147.0" text="totalAmout" />
          </columns>
       </TableView>
