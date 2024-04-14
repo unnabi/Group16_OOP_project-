@@ -4,10 +4,15 @@
  */
 package mainpkg;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -56,6 +61,7 @@ public class CostMaterialController implements Initializable {
     @FXML
     private TableColumn<DummyCost, String> materialNameTableViewOnClick;
     @FXML
+    private TableColumn<?, ?> totalCostTableOnClick1;
     //private TableColumn<?, ?> totalCostTableOnClick1;
     
 
@@ -123,6 +129,38 @@ public class CostMaterialController implements Initializable {
 
         currentStage.setScene(newScene);
         currentStage.show();
+    }
+
+    @FXML
+    private void materialCostWriteFileButtonOnClick(ActionEvent event) {
+        File f = null;
+        FileOutputStream fos = null;      
+        ObjectOutputStream oos = null;
+        
+        try {
+            f = new File("Cost.bin");
+            if(f.exists()){
+                fos = new FileOutputStream(f,true);
+                oos = new AppendableObjectOutputStream(fos);                
+            }
+            else{
+                fos = new FileOutputStream(f);
+                oos = new ObjectOutputStream(fos);               
+            }
+            Cost e = new Cost(( materialNameOnClick.getValue()),Float.parseFloat(priceOnClick.getText()),
+                Integer.parseInt( vatOnClick.getText()),quantityOnClick.getValue());
+            oos.writeObject(e);
+
+        } catch (IOException ex) {
+            Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(oos != null) oos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(MainFXMLController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }                
+        
     }
     
 }

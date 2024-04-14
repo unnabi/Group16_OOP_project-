@@ -32,8 +32,8 @@ public class RawMaterialDashboardController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       comboBoxOnClick.getItems().addAll("Product Order","Delivery Product","Return product",
-                "Product Cost","Available Product","Material Instruction","Catalog","Update Location");
+       comboBoxOnClick.getItems().addAll("MaterialOrder","DeliveryProduct","Returnproduct",
+                "MaterialCost","AvailableProduct","MaterialInstruction","Catalog","UpdateLocation");
     }    
 
     @FXML
@@ -41,26 +41,26 @@ public class RawMaterialDashboardController implements Initializable {
         String a=comboBoxOnClick.getValue().toString();
         Parent sceneA = null;
         
-        if(a=="Product Order"){
+        if(a=="MaterialOrder"){
             sceneA=FXMLLoader.load(getClass().getResource("orderProduct.fxml"));   
             
         }
-        else if(a=="Delivery Product"){
+        else if(a=="DeliveryProduct"){
              sceneA=FXMLLoader.load(getClass().getResource("delivery.fxml"));   
         }
         
-         else if(a=="Return product"){
+         else if(a=="Returnproduct"){
              sceneA=FXMLLoader.load(getClass().getResource("ReturnProduct.fxml"));   
         }
-         else if(a=="Product Cost"){
+         else if(a=="MaterialCost"){
              sceneA=FXMLLoader.load(getClass().getResource("costMaterial.fxml"));   
         }
         
-        else if(a=="Available Product"){
+        else if(a=="AvailableProduct"){
              sceneA=FXMLLoader.load(getClass().getResource("Availability.fxml"));
              
         }
-        else if(a=="Material Instruction"){
+        else if(a=="MaterialInstruction"){
               sceneA=FXMLLoader.load(getClass().getResource("InstructionMaterial.fxml"));
         }
         
@@ -69,7 +69,7 @@ public class RawMaterialDashboardController implements Initializable {
               sceneA=FXMLLoader.load(getClass().getResource("MaterialCatalog.fxml"));
         }
         
-        else if(a=="Update Location"){
+        else if(a=="UpdateLocation"){
               sceneA=FXMLLoader.load(getClass().getResource("trackLocation.fxml"));
         }
         

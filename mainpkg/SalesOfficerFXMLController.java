@@ -41,7 +41,7 @@ public class SalesOfficerFXMLController implements Initializable {
          String a=comboBoxOnClick.getValue().toString();
         Parent sceneA = null;
         if(a=="ForeCastSale"){
-            sceneA=FXMLLoader.load(getClass().getResource("foreCastSales.fxml"));   
+            sceneA=FXMLLoader.load(getClass().getResource("forecastSale.fxml"));   
             
         }
         else if(a=="Achieve Target"){

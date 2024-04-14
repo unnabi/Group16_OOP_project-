@@ -32,11 +32,12 @@
             <TableColumn fx:id="totalAmountOnTableViewClick" prefWidth="147.0" text="totalAmout" />
          </columns>
       </TableView>
-      <Button layoutX="338.0" layoutY="570.0" mnemonicParsing="false" onAction="#gobackButtonOnClick" text="GoBack" />
+      <Button layoutX="62.0" layoutY="572.0" mnemonicParsing="false" onAction="#gobackButtonOnClick" text="GoBack" />
       <Text layoutX="324.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Report">
          <font>
             <Font name="System Bold Italic" size="35.0" />
          </font>
       </Text>
+      <Button layoutX="412.0" layoutY="572.0" mnemonicParsing="false" onAction="#salesReportWriteFileButtonOnClick" prefHeight="31.0" prefWidth="368.0" text="salesReport &quot;Write&quot;File" />
    </children>
 </AnchorPane>

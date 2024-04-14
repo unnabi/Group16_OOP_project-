@@ -35,11 +35,12 @@
             <TableColumn fx:id="totalCostTableOnClick" prefWidth="137.0" text="totalCost" />
          </columns>
       </TableView>
-      <Button layoutX="346.0" layoutY="597.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="150.0" text="Back" />
+      <Button layoutX="35.0" layoutY="597.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="150.0" text="Back" />
       <Text layoutX="298.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Material Cost">
          <font>
             <Font name="System Bold Italic" size="34.0" />
          </font>
       </Text>
+      <Button layoutX="398.0" layoutY="597.0" mnemonicParsing="false" onAction="#materialCostWriteFileButtonOnClick" prefHeight="31.0" prefWidth="364.0" text="materialCost Write file" />
    </children>
 </AnchorPane>
