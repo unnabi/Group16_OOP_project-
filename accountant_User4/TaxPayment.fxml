@@ -31,6 +31,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Button layoutX="267.0" layoutY="505.0" mnemonicParsing="false" onAction="#payTaxButtonOnMouseClick" text="Pay Tax" />
+      <Button layoutX="195.0" layoutY="503.0" mnemonicParsing="false" onAction="#payTaxButtonOnMouseClick" text="Pay Tax" />
+      <Button layoutX="338.0" layoutY="503.0" mnemonicParsing="false" onAction="#confirmationButtonOnMouseClick" text="Confirmation" />
    </children>
 </AnchorPane>

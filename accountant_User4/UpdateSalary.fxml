@@ -18,13 +18,15 @@
       <Label layoutX="112.0" layoutY="165.0" text="Employee Name" />
       <Label layoutX="112.0" layoutY="218.0" text="Department" />
       <Label layoutX="112.0" layoutY="270.0" text="Salary Increment %" />
-      <Label layoutX="112.0" layoutY="315.0" text="New Salary" />
-      <Button layoutX="186.0" layoutY="391.0" mnemonicParsing="false" onAction="#updateNewSalaryOnMouseClick" text="Update New Salary" />
-      <Button layoutX="506.0" layoutY="391.0" mnemonicParsing="false" onAction="#upddatedListButtonOnMouseClick" text="Updated List" />
+      <Label layoutX="112.0" layoutY="315.0" text="Old Salary" />
+      <Button layoutX="166.0" layoutY="422.0" mnemonicParsing="false" onAction="#updateNewSalaryOnMouseClick" text="Update New Salary" />
+      <Button layoutX="506.0" layoutY="422.0" mnemonicParsing="false" onAction="#upddatedListButtonOnMouseClick" text="Updated List" />
       <ComboBox fx:id="employeeIDComboBox" layoutX="288.0" layoutY="111.0" onAction="#employeeIDSelectOnMouseClick" prefWidth="150.0" />
       <TextField fx:id="employeeNameTextField" editable="false" layoutX="288.0" layoutY="160.0" />
       <TextField fx:id="deptTextField" editable="false" layoutX="288.0" layoutY="213.0" />
       <TextField fx:id="salaryIncrementTextField" editable="false" layoutX="288.0" layoutY="265.0" />
-      <TextField fx:id="newSalaryTextField" editable="false" layoutX="288.0" layoutY="310.0" />
+      <TextField fx:id="oldSalaryTextField" layoutX="288.0" layoutY="310.0" />
+      <Label layoutX="112.0" layoutY="363.0" text="New Salary" />
+      <TextField fx:id="newSalaryTextField" editable="false" layoutX="288.0" layoutY="358.0" />
    </children>
 </AnchorPane>

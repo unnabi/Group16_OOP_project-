@@ -4,44 +4,23 @@
  */
 package accountant_User4;
 
-import hrExecutive_User3.HRExecutive;
-import hrExecutive_User3.Incrementation;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+
+import java.io.Serializable;
+
 
 /**
  *
  * @author Dell
  */
-public class UpdateSalary {
+public class UpdateSalary implements Serializable{
     
     private int employeeID, incrementedPercentage,newSalary,oldSalary;
     private String employeeName,dept;
     
-    ObservableList <Incrementation> employee = FXCollections.observableList(HRExecutive.loadSalaryIncrementDataFromList("SalaryIncrementObj.bin"));
-    ObservableList <Salary> salary = FXCollections.observableList(Accountant.loadSalaryDeclarationDataFromFile("SalaryData.bin"));
-
     public UpdateSalary() {
     }
 
     public UpdateSalary(int employeeID, int incrementedPercentage, int newSalary, String employeeName, String dept) {
-        
-        for(Incrementation i : employee){
-            for (Salary s : salary){
-                if(i.getEmployeeID() == s.getId()){
-                    
-                    this.employeeID = employeeID;
-                    this.incrementedPercentage = incrementedPercentage;
-                    this.newSalary = newSalary;
-                    this.employeeName = employeeName;
-                    this.dept = dept;
-                
-                
-                }
-            }
-             
-        
-        }
         this.employeeID = employeeID;
         this.incrementedPercentage = incrementedPercentage;
         this.newSalary = newSalary;
@@ -49,22 +28,61 @@ public class UpdateSalary {
         this.dept = dept;
     }
 
-//    public UpdateSalary(int employeeID, int incrementedPercentage, int newSalary, int oldSalary, String employeeName, String dept) {
-//        
-//        for(Incrementation i : employee){
-//            for (Salary s : salary){
-//                if(i.getEmployeeID() == s.getId()){
-//                    
-//                    this.employeeID = i.getEmployeeID();
-//                    this.incrementedPercentage = i.getPercentOfIncrement();
-//                    this.newSalary = newSalary;
-//                    this.employeeName = i.getEmployeeName();
-//                    this.dept = i.getEmployeeDept();
-//                    this.oldSalary = s.getSalary();
-//                
-//                
-//                }
-//            }
-//        }
-//    }
+    public UpdateSalary(int employeeID, int incrementedPercentage, int newSalary, int oldSalary, String employeeName, String dept) {
+        this.employeeID = employeeID;
+        this.incrementedPercentage = incrementedPercentage;
+        this.newSalary = newSalary;
+        this.oldSalary = oldSalary;
+        this.employeeName = employeeName;
+        this.dept = dept;
+    }
+    
+
+    public long getEmployeeID() {
+        return employeeID;
+    }
+
+    public void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    public long getIncrementedPercentage() {
+        return incrementedPercentage;
+    }
+
+    public void setIncrementedPercentage(int incrementedPercentage) {
+        this.incrementedPercentage = incrementedPercentage;
+    }
+
+    public long getNewSalary() {
+        return newSalary;
+    }
+
+    public void setNewSalary(int newSalary) {
+        this.newSalary = newSalary;
+    }
+
+    public long getOldSalary() {
+        return oldSalary;
+    }
+
+    public void setOldSalary(int oldSalary) {
+        this.oldSalary = oldSalary;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public String getDept() {
+        return dept;
+    }
+
+    public void setDept(String dept) {
+        this.dept = dept;
+    }
 }

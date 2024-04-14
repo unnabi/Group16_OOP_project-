@@ -166,5 +166,98 @@ public class Accountant extends User implements Serializable{
     
     
     }
+     
+    public static void storeUpdateSalaryDataToFile(UpdateSalary salary, String fileN) throws IOException{
+        ArrayList<UpdateSalary> updateData = loadUpdateSalaryDataFromFile(fileN);
+        updateData.add(salary);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(UpdateSalary s : updateData){
+                oos.writeObject(s);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+     
+     
+    public static ArrayList<UpdateSalary> loadUpdateSalaryDataFromFile(String fileName){
+        
+        ArrayList<UpdateSalary> updateSalaryData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    UpdateSalary data = (UpdateSalary) ois.readObject();
+                    updateSalaryData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return updateSalaryData;
     
+    
+    }
+    
+    public static ArrayList<TaxPayment> loadTaxPaymentDataFromFile(String fileName){
+        
+        ArrayList<TaxPayment> taxData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    TaxPayment data = (TaxPayment) ois.readObject();
+                    taxData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return taxData;
+    
+    
+    }
+    public static void storeTaxPaymentDataToFile(TaxPayment taxpay, String fileN) throws IOException{
+        ArrayList<TaxPayment> taxData = loadTaxPaymentDataFromFile(fileN);
+        taxData.add(taxpay);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(TaxPayment t : taxData){
+                oos.writeObject(t);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
 }
