@@ -51,10 +51,10 @@ public class HRDashBoardController implements Initializable {
     private void salaryIncrementationSceneOnMouseClicked(ActionEvent event) throws IOException {
         changeScene("SalaryIncrementation.fxml");
     }
-
+    
     @FXML
-    private void employeeListSceneOnMouseClicked(ActionEvent event) throws IOException {
-        changeScene("EmployeeListWithUpdatedSalary.fxml");
+    private void internTrainingSceneOnMouseClicked(ActionEvent event) throws IOException {
+        changeScene("InternTrainingAllocation.fxml");
     }
 
     @FXML
@@ -96,4 +96,6 @@ public class HRDashBoardController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 }

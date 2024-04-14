@@ -66,11 +66,15 @@ public class AccountantDashBoardController implements Initializable {
     private void feedbackToHRSceneOnMouseClicked(ActionEvent event) throws IOException {
         changeScene("FeedBackToHR.fxml");
     }
-
+    
     @FXML
-    private void returningProductDetailsSceneOnMouseClicked(ActionEvent event) throws IOException {
-        changeScene("ReturningProduct.fxml");
+    private void expenseReimbursementSceneOnMouseClicked(ActionEvent event) throws IOException {
+        changeScene("ExpenseReimbursementRecord.fxml");
     }
+
+//    private void returningProductDetailsSceneOnMouseClicked(ActionEvent event) throws IOException {
+//        changeScene("ReturningProduct.fxml");
+//    }
 
     @FXML
     private void monthlyIncomeStatementSceneOnMouseClicked(ActionEvent event) throws IOException {
@@ -95,5 +99,7 @@ public class AccountantDashBoardController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
     
 }

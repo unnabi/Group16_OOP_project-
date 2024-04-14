@@ -187,5 +187,50 @@ public class HRExecutive extends User implements Serializable {
         }
         return count;    
     }
+    
+    public static ArrayList<Training> loadTrainingDataFromList(String increFile){
+        ArrayList<Training> trainingList = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(increFile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Training train = (Training) ois.readObject();
+                    trainingList.add(train);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return trainingList;
+       
+   }
+    
+    public static void addTrainingDataToList(Training training, String increFile){
+        
+        ArrayList<Training> trainData = loadTrainingDataFromList(increFile);
+        trainData.add(training);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(increFile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(Training trainin : trainData){
+                oos.writeObject(trainin);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
 
 }

@@ -238,9 +238,9 @@ public class Accountant extends User implements Serializable{
         }
         
     return taxData;
-    
-    
+
     }
+    
     public static void storeTaxPaymentDataToFile(TaxPayment taxpay, String fileN) throws IOException{
         ArrayList<TaxPayment> taxData = loadTaxPaymentDataFromFile(fileN);
         taxData.add(taxpay);
@@ -252,6 +252,51 @@ public class Accountant extends User implements Serializable{
             
             for(TaxPayment t : taxData){
                 oos.writeObject(t);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    
+    public static ArrayList<Reimbursement> loadReimbursementDataFromFile(String fileName){
+        
+        ArrayList<Reimbursement> reimburseData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Reimbursement data = (Reimbursement) ois.readObject();
+                    reimburseData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return reimburseData;
+    }
+    
+    public static void storeReimbersementDataToFile(Reimbursement reimberse, String fileN) throws IOException{
+        ArrayList<Reimbursement> reimbData = loadReimbursementDataFromFile(fileN);
+        reimbData.add(reimberse);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(Reimbursement r : reimbData){
+                oos.writeObject(r);
             }
             oos.close();
             

@@ -122,6 +122,7 @@ public class InternSelectionController implements Initializable {
                 Intern intern = new Intern(internNameTextField.getText(),uniNameComboBox.getValue(),recruitedDeptComboBox.getValue(),selectRadioButton(),
                         Integer.parseInt(internIDTextField.getText()),Integer.parseInt(internContactNumTextField.getText()),
                         recruitedDatePicker.getValue());
+                
                 HRExecutive.addInterntoList(intern, "InternObject.bin");
                 
                 

@@ -21,7 +21,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#employeeSalaryDeclarationSceneOnMouseClicked" text="Salary Declaration to Employee" />
                   <MenuItem mnemonicParsing="false" onAction="#internSalaryDeclarationSceneOnMouseClicked" text="Salary Declaration to Intern" />
                   <MenuItem mnemonicParsing="false" onAction="#generateSalesReportSceneOnMouseClicked" text="Generate Sales Report" />
-                  <MenuItem mnemonicParsing="false" onAction="#returningProductDetailsSceneOnMouseClicked" text="Details of Returning Products" />
+                  <MenuItem mnemonicParsing="false" onAction="#expenseReimbursementSceneOnMouseClicked" text="Expense Reimbursement" />
                </items>
             </Menu>
          </menus>

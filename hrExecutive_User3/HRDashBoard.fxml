@@ -20,7 +20,7 @@
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#employeeSelectionSceneOnMouseClicked" text="Employee Selection" />
                   <MenuItem mnemonicParsing="false" onAction="#internSelectionSceneOnMouseClicked" text="Intern Selection" />
-                  <MenuItem mnemonicParsing="false" onAction="#sortingRecruitmentSceneOnMouseClicked" text="Sorting Recruitment" />
+                  <MenuItem mnemonicParsing="false" onAction="#sortingRecruitmentSceneOnMouseClicked" text="Employee List" />
                   <MenuItem mnemonicParsing="false" onAction="#workplacePolicySceneOnMouseClicked" text="Update Workplace Policy" />
                </items>
             </Menu>
@@ -47,7 +47,7 @@
                               <Insets />
                            </opaqueInsets>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#employeeListSceneOnMouseClicked" prefHeight="46.0" prefWidth="212.0" text="Employee List" textFill="#861e1e">
+                        <Button mnemonicParsing="false" onAction="#internTrainingSceneOnMouseClicked" prefHeight="46.0" prefWidth="212.0" text="Intern Training" textFill="#861e1e">
                            <font>
                               <Font name="Century Schoolbook" size="24.0" />
                            </font>
