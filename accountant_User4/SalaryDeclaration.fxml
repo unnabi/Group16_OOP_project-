@@ -24,6 +24,7 @@
       <TextField fx:id="recruitedDeptTextField" editable="false" layoutX="208.0" layoutY="246.0" />
       <TextField fx:id="salaryTextField" layoutX="208.0" layoutY="309.0" />
       <Label layoutX="140.0" layoutY="314.0" text="Salary" />
-      <Button layoutX="226.0" layoutY="383.0" mnemonicParsing="false" onAction="#declareSalaryButtonOnMouseClick" text="Declare Salary" />
+      <Button layoutX="83.0" layoutY="382.0" mnemonicParsing="false" onAction="#declareSalaryButtonOnMouseClick" text="Declare Salary" />
+      <Button layoutX="331.0" layoutY="382.0" mnemonicParsing="false" onAction="#employeeListOnMouseClick" text="Employee List" />
    </children>
 </AnchorPane>

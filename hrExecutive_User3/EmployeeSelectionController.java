@@ -36,11 +36,10 @@ public class EmployeeSelectionController implements Initializable {
     private ComboBox<String> departmentComboBox;
     @FXML
     private DatePicker assignedDatePicker;
-    
+
     Employee employee;
-    
+
     Alert alert;
-    
 
     /**
      * Initializes the controller class.
@@ -48,38 +47,36 @@ public class EmployeeSelectionController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        departmentComboBox.getItems().addAll( "Manufacturing Machine Operator","Accountant", 
+        departmentComboBox.getItems().addAll("Manufacturing Machine Operator", "Accountant",
                 "HR executive", "Sales Officer", "Production Manager");
-        
-        
 
-    }    
+    }
 
     @FXML
     private void recruitEmployeeOnMouseClick(ActionEvent event) throws IOException {
-        
-        if(applicantNameTextField.getText().isEmpty() || applicantIDTextField.getText().isEmpty() || applicantContactNumberTextField.getText().isEmpty() || departmentComboBox.getValue() == null || assignedDatePicker.getValue().toString().isEmpty()){
-            
+
+        if (applicantNameTextField.getText().isEmpty() || applicantIDTextField.getText().isEmpty()
+                || applicantContactNumberTextField.getText().isEmpty()
+                || departmentComboBox.getValue() == null || assignedDatePicker.getValue().toString().isEmpty()) {
+
             alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Warning Alert");
             alert.setContentText("Please give proper Information");
             alert.setHeaderText(null);
             alert.showAndWait();
-        }
-        else{
+        } else {
             employee = new Employee(Integer.parseInt(applicantIDTextField.getText()),
-                Integer.parseInt(applicantContactNumberTextField.getText()),applicantNameTextField.getText(),
-                departmentComboBox.getValue(),assignedDatePicker.getValue()); 
-            
-            
+                    Integer.parseInt(applicantContactNumberTextField.getText()), applicantNameTextField.getText(),
+                    departmentComboBox.getValue(), assignedDatePicker.getValue());
+
             HRExecutive.addEmployeetoList(employee, "EmployeeObject.bin");
-            
+
             alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Information");
             alert.setContentText("Employee Successfully Added.");
             alert.setHeaderText(null);
             alert.showAndWait();
-            
+
             applicantNameTextField.clear();
             applicantIDTextField.clear();
             applicantContactNumberTextField.clear();
@@ -88,5 +85,5 @@ public class EmployeeSelectionController implements Initializable {
         }
 
     }
-    
+
 }

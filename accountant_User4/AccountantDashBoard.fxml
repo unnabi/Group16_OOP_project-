@@ -34,7 +34,10 @@
                <children>
                   <VBox prefHeight="547.0" prefWidth="214.0" style="-fx-background-color: red;">
                      <children>
-                        <Label prefHeight="34.0" prefWidth="203.0" text="User: Accountant" />
+                        <Label prefHeight="34.0" prefWidth="203.0" text="User: Accountant">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
                         <Label />
                         <Button mnemonicParsing="false" onAction="#updateSalarySceneOnMouseClicked" prefHeight="46.0" prefWidth="228.0" text="Update Salary" textFill="#861e1e">
                            <font>

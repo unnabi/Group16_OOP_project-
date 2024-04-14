@@ -100,7 +100,7 @@ public class Accountant extends User implements Serializable{
     
     }
     
-       public static void storeSalaryDeclarationDataToFile(Salary salary, String fileN) throws IOException{
+    public static void storeSalaryDeclarationDataToFile(Salary salary, String fileN) throws IOException{
         ArrayList<Salary> salaryData = loadSalaryDeclarationDataFromFile(fileN);
         salaryData.add(salary);
         
@@ -119,4 +119,52 @@ public class Accountant extends User implements Serializable{
         }
 
     }
+    
+     public static void storeIncomeStatementDataToFile(IncomeStatement income, String fileN) throws IOException{
+        ArrayList<IncomeStatement> incomeData = loadIncomeStatementDataFromFile(fileN);
+        incomeData.add(income);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(IncomeStatement s : incomeData){
+                oos.writeObject(s);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+     
+     public static ArrayList<IncomeStatement> loadIncomeStatementDataFromFile(String fileName){
+        
+        ArrayList<IncomeStatement> incomeStatementData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    IncomeStatement data = (IncomeStatement) ois.readObject();
+                    incomeStatementData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return incomeStatementData;
+    
+    
+    }
+    
 }

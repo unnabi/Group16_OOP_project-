@@ -7,25 +7,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="831.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="831.0" style="-fx-background-color: #8678da;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="accountant_User4.UpdateSalaryController">
    <children>
-      <Label layoutX="363.0" layoutY="38.0" prefHeight="38.0" prefWidth="106.0" style="-fx-background-color: lime;" text="Update Salary">
+      <Label layoutX="363.0" layoutY="38.0" prefHeight="38.0" prefWidth="106.0" text="Update Salary" underline="true">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Label>
       <Label layoutX="112.0" layoutY="116.0" text="Employee ID" />
       <Label layoutX="112.0" layoutY="165.0" text="Employee Name" />
-      <Label layoutX="112.0" layoutY="218.0" text="Contact Number" />
+      <Label layoutX="112.0" layoutY="218.0" text="Department" />
       <Label layoutX="112.0" layoutY="270.0" text="Salary Increment %" />
       <Label layoutX="112.0" layoutY="315.0" text="New Salary" />
-      <Button layoutX="186.0" layoutY="391.0" mnemonicParsing="false" text="Update New Salary" />
-      <Button layoutX="506.0" layoutY="391.0" mnemonicParsing="false" text="Notify HR" />
-      <ComboBox layoutX="288.0" layoutY="111.0" prefWidth="150.0" />
-      <TextField editable="false" layoutX="288.0" layoutY="160.0" />
-      <TextField editable="false" layoutX="288.0" layoutY="213.0" />
-      <TextField editable="false" layoutX="288.0" layoutY="265.0" />
-      <TextField editable="false" layoutX="288.0" layoutY="310.0" />
+      <Button layoutX="186.0" layoutY="391.0" mnemonicParsing="false" onAction="#updateNewSalaryOnMouseClick" text="Update New Salary" />
+      <Button layoutX="506.0" layoutY="391.0" mnemonicParsing="false" onAction="#upddatedListButtonOnMouseClick" text="Updated List" />
+      <ComboBox fx:id="employeeIDComboBox" layoutX="288.0" layoutY="111.0" onAction="#employeeIDSelectOnMouseClick" prefWidth="150.0" />
+      <TextField fx:id="employeeNameTextField" editable="false" layoutX="288.0" layoutY="160.0" />
+      <TextField fx:id="deptTextField" editable="false" layoutX="288.0" layoutY="213.0" />
+      <TextField fx:id="salaryIncrementTextField" editable="false" layoutX="288.0" layoutY="265.0" />
+      <TextField fx:id="newSalaryTextField" editable="false" layoutX="288.0" layoutY="310.0" />
    </children>
 </AnchorPane>

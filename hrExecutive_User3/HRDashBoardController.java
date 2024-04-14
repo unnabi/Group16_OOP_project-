@@ -35,7 +35,7 @@ public class HRDashBoardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    }
 
     @FXML
     private void employeeSelectionSceneOnMouseClicked(ActionEvent event) throws IOException {
@@ -96,6 +96,4 @@ public class HRDashBoardController implements Initializable {
             e.printStackTrace();
         }
     }
-    
-    
 }
