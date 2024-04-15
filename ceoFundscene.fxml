@@ -10,7 +10,7 @@
       <Button layoutX="60.0" layoutY="42.0" mnemonicParsing="false" onAction="#backOnClick" text="Back" />
       <Button layoutX="365.0" layoutY="346.0" mnemonicParsing="false" onAction="#denyOnClick" text="Deny" />
       <Button layoutX="478.0" layoutY="346.0" mnemonicParsing="false" onAction="#approveOnClick" text="approve" />
-      <TableView fx:id="fundtable" layoutX="36.0" layoutY="109.0" prefHeight="200.0" prefWidth="499.0">
+      <TableView layoutX="36.0" layoutY="109.0" prefHeight="200.0" prefWidth="499.0">
         <columns>
           <TableColumn fx:id="projectNameonClick" prefWidth="163.0" text="project name" />
           <TableColumn fx:id="fundAmountOnclick" prefWidth="172.0" text="fund amaount" />

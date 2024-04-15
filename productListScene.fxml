@@ -18,6 +18,5 @@
       </TableView>
       <Button layoutX="54.0" layoutY="37.0" mnemonicParsing="false" onAction="#backOnClick" text="back" />
       <Button layoutX="619.0" layoutY="343.0" mnemonicParsing="false" onAction="#doneOnClick" text="done" />
-      <Button layoutX="105.0" layoutY="343.0" mnemonicParsing="false" onAction="#productListWriteFileButtonOnClick" prefHeight="31.0" prefWidth="316.0" text="productList &quot;Write&quot;file" />
    </children>
 </AnchorPane>
