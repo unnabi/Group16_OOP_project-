@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Retailer.FeedBack_user1Controller">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="577.0" prefWidth="629.0" style="-fx-background-color: chocolate;">
          <children>
@@ -21,14 +21,14 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="192.0" layoutY="57.0" promptText="name" />
-            <TextField layoutX="192.0" layoutY="102.0" promptText="\@gmail.com " />
-            <TextField layoutX="192.0" layoutY="144.0" promptText="+880 000 000 00 00" />
-            <TextArea layoutX="85.0" layoutY="259.0" prefHeight="174.0" prefWidth="463.0" promptText="Give feedback for products they have purchased or are interested in." style="-fx-background-color: blue;" AnchorPane.bottomAnchor="144.0" />
-            <RadioButton layoutX="95.0" layoutY="206.0" mnemonicParsing="false" text="Concern" />
-            <RadioButton layoutX="261.0" layoutY="206.0" mnemonicParsing="false" text="Suggestions" />
-            <RadioButton layoutX="426.0" layoutY="206.0" mnemonicParsing="false" text="Praise" />
-            <Button layoutX="224.0" layoutY="451.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: navy;" text="Send" textFill="WHITE" />
+            <TextField fx:id="employeeNameTextField" layoutX="192.0" layoutY="57.0" promptText="name" />
+            <TextField fx:id="EmailTextField" layoutX="192.0" layoutY="102.0" promptText="\@gmail.com " />
+            <TextField fx:id="contactNumberTextField" layoutX="192.0" layoutY="144.0" promptText="+880 000 000 00 00" />
+            <TextArea fx:id="feedbackTextArea" layoutX="85.0" layoutY="259.0" prefHeight="174.0" prefWidth="463.0" promptText="Give feedback for products they have purchased or are interested in." style="-fx-background-color: blue;" AnchorPane.bottomAnchor="144.0" />
+            <RadioButton fx:id="ConcernRedioButtton" layoutX="95.0" layoutY="206.0" mnemonicParsing="false" text="Concern" />
+            <RadioButton fx:id="suggestRedioButtton" layoutX="261.0" layoutY="206.0" mnemonicParsing="false" text="Suggestions" />
+            <RadioButton fx:id="praiseRedioButtton" layoutX="426.0" layoutY="206.0" mnemonicParsing="false" text="Praise" />
+            <Button layoutX="224.0" layoutY="451.0" mnemonicParsing="false" onAction="#sentOnmouseclicked" prefHeight="31.0" prefWidth="187.0" style="-fx-background-color: navy;" text="Send" textFill="WHITE" />
             <Line endX="468.0" layoutX="133.0" layoutY="507.0" startX="-100.0" strokeWidth="3.0" />
          </children>
       </AnchorPane>
