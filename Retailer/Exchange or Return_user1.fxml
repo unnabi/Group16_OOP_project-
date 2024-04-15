@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="523.0" style="-fx-background-color: chocolate;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="523.0" style="-fx-background-color: chocolate;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="Retailer.ExchangeOrReturn_user1Controller">
    <children>
       <Label layoutX="155.0" layoutY="14.0" style="-fx-background-color: brown;" text="Exchange or Return " textFill="WHITE">
          <font>

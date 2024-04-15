@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
-package ceramicindustry_oopproject_group16;
+package ManufacturingMachineOperator;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -13,7 +13,7 @@ import javafx.fxml.Initializable;
  *
  * @author SHEHAB NABI
  */
-public class FXMLDocumentController implements Initializable {
+public class MachineStatus_user2Controller implements Initializable {
 
     /**
      * Initializes the controller class.
