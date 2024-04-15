@@ -15,7 +15,7 @@
       </Text>
       <Button layoutX="51.0" layoutY="93.0" mnemonicParsing="false" onAction="#vieewProductButtonOnClick" text="Load Button" />
       <TextArea fx:id="textAreaOnClick" layoutX="48.0" layoutY="155.0" prefHeight="249.0" prefWidth="668.0" />
-      <Button layoutX="51.0" layoutY="445.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Go Back" />
+      <Button layoutX="51.0" layoutY="445.0" mnemonicParsing="false" onAction="#gobackButtonOnClick" text="Go Back" />
       <Button layoutX="599.0" layoutY="445.0" mnemonicParsing="false" onAction="#nextPageButtonOnClick" text="Submit" />
       <Button layoutX="149.0" layoutY="476.0" mnemonicParsing="false" onAction="#readProductFileButtonOnClick" prefHeight="31.0" prefWidth="395.0" text="productList read file" />
    </children>

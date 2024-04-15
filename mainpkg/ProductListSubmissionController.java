@@ -33,7 +33,7 @@ public class ProductListSubmissionController implements Initializable {
 
     @FXML
     private void backButtonOnClick(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("orderProduct.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("materialList.fxml"));
         Parent parent = loader.load();
 
         
