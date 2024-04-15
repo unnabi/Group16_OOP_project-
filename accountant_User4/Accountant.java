@@ -305,4 +305,50 @@ public class Accountant extends User implements Serializable{
         }
 
     }
+    
+    public static ArrayList<Budget> loadBudgetDataFromFile(String fileName){
+        
+        ArrayList<Budget> budgetData = new ArrayList();
+        
+        try{
+            FileInputStream fis = new FileInputStream(fileName);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            while(true){
+                try{
+                    Budget data = (Budget) ois.readObject();
+                    budgetData.add(data);
+                
+                }catch(Exception e){
+                    break;
+                }
+            
+            }
+            ois.close();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+    return budgetData;
+    }
+    
+    public static void storeBudgetDataToFile(Budget budget, String fileN) throws IOException{
+        ArrayList<Budget> budgData = loadBudgetDataFromFile(fileN);
+        budgData.add(budget);
+        
+        try{
+            
+            FileOutputStream fos = new FileOutputStream(fileN);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            
+            for(Budget r : budgData){
+                oos.writeObject(r);
+            }
+            oos.close();
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+    
 }

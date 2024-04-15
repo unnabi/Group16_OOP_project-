@@ -14,13 +14,14 @@ import java.io.Serializable;
  */
 public class UpdateSalary implements Serializable{
     
-    private int employeeID, incrementedPercentage,newSalary,oldSalary;
+    private int employeeID, incrementedPercentage,oldSalary;
+    private float newSalary;
     private String employeeName,dept;
     
     public UpdateSalary() {
     }
 
-    public UpdateSalary(int employeeID, int incrementedPercentage, int newSalary, String employeeName, String dept) {
+    public UpdateSalary(int employeeID, int incrementedPercentage, float newSalary, String employeeName, String dept) {
         this.employeeID = employeeID;
         this.incrementedPercentage = incrementedPercentage;
         this.newSalary = newSalary;
@@ -28,7 +29,7 @@ public class UpdateSalary implements Serializable{
         this.dept = dept;
     }
 
-    public UpdateSalary(int employeeID, int incrementedPercentage, int newSalary, int oldSalary, String employeeName, String dept) {
+    public UpdateSalary(int employeeID, int incrementedPercentage, float newSalary, int oldSalary, String employeeName, String dept) {
         this.employeeID = employeeID;
         this.incrementedPercentage = incrementedPercentage;
         this.newSalary = newSalary;
@@ -54,7 +55,7 @@ public class UpdateSalary implements Serializable{
         this.incrementedPercentage = incrementedPercentage;
     }
 
-    public long getNewSalary() {
+    public float getNewSalary() {
         return newSalary;
     }
 
@@ -62,7 +63,7 @@ public class UpdateSalary implements Serializable{
         this.newSalary = newSalary;
     }
 
-    public long getOldSalary() {
+    public int getOldSalary() {
         return oldSalary;
     }
 

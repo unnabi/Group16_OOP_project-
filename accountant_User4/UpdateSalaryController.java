@@ -73,7 +73,7 @@ public class UpdateSalaryController implements Initializable {
         }
         else{
             UpdateSalary update = new UpdateSalary(employeeIDComboBox.getValue(),Integer.parseInt(salaryIncrementTextField.getText()),
-                    Integer.parseInt(newSalaryTextField.getText()),Integer.parseInt(oldSalaryTextField.getText()),
+                    Float.parseFloat(newSalaryTextField.getText()),Integer.parseInt(oldSalaryTextField.getText()),
                     employeeNameTextField.getText(),deptTextField.getText());
             
             Accountant.storeUpdateSalaryDataToFile(update, "UpdatedSalary.bin");
@@ -124,13 +124,6 @@ public class UpdateSalaryController implements Initializable {
         
         }
         
-    }
-    private int calculateNewSalary(int oldSalary,int incre){
-        
-        return (oldSalary * (incre/100));
-    
-    }
-
-    
+    }   
     
 }

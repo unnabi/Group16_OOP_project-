@@ -79,11 +79,6 @@ public class MonthlyIncomeStatementReportController implements Initializable {
             alert.setContentText("Data Stored Successfully.");
             alert.setHeaderText(null);
             alert.showAndWait();
-            
-           
-            
-        
-        
         }
         
         
