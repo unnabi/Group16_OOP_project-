@@ -55,8 +55,9 @@ public class Discount {
         this.PercentageDiscount = PercentageDiscount;
     }
 public float getTotalPrice() {
-        float totalvat=(this.UnitPrice*this. PercentageDiscount)/100f;
-        return totalvat*Quantity;
+        float totalDiscount = (this.UnitPrice * this.PercentageDiscount) / 100f;
+        float totalPrice = (this.UnitPrice - totalDiscount) * this.Quantity;
+        return totalPrice;
     }
     @Override
     public String toString() {

@@ -47,6 +47,8 @@ public class Application {
     public String toString() {
         return "Application{" + "ProductId=" + ProductId + ", ProductName=" + ProductName + ", Instraction=" + Instraction + '}';
     }
+  
+ }
+
    
-}
     

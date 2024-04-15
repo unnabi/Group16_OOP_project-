@@ -64,7 +64,7 @@ public class AchieveSalesTargetController implements Initializable {
 
     @FXML
     private void goBackButtonOnClick(ActionEvent event) throws IOException {
-         FXMLLoader loader = new FXMLLoader(getClass().getResource("SalesOfficerDashboard_1.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("SalesOfficerDashboard_1.fxml"));
         Parent parent = loader.load();
 
         

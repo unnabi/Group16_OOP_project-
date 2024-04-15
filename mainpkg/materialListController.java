@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class OrderProductController implements Initializable {
+public class materialListController implements Initializable {
 
     @FXML
     private TextArea textAreaOnClick;
@@ -94,15 +94,15 @@ public class OrderProductController implements Initializable {
         ObjectInputStream ois = null;
         
         try {
-            f = new File("EmpObjects.bin");
+            f = new File("MaterialObjectStream.bin");
             fis = new FileInputStream(f);
             ois = new ObjectInputStream(fis);
-           OrderProduct emp;
+           Material emp;
             try{
                 textAreaOnClick.setText("");
                 while(true){
-                    System.out.println("Printing objects.");
-                    emp = (OrderProduct)ois.readObject();
+                    System.out.println("MaterialList");
+                    emp = (Material)ois.readObject();
                     //Object obj = ois.readObject();
                     //obj.submitReport();
                     emp.submitReport();

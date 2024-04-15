@@ -91,7 +91,7 @@ public class ForeCastSalesController implements Initializable {
         for(Forecast c:foresale){
           tableVieewOnClick.getItems().add(
                 new Forecast(c.getProductName(),c. getMonth(),
-                        c.getSalesForecast(),c. getTotalSale())
+                        c. getSalesForecast(),c. getTotalSale())
         );  
         
    }

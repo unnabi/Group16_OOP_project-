@@ -53,6 +53,7 @@ public class AvailabilityController implements Initializable {
         String selectedName=  materialNameOnClick.getValue();
         for (Availability st :avlty){
             if (st.getMaterialName()==selectedName){
+               System.out.println("Available");
                textAreaOnClick.setText("MaterialName: " + st.getMaterialName() + "\nMaterialID:" + st.getMaterialId() + "\nQuantity:" + st. getQuantity());
             break;
               

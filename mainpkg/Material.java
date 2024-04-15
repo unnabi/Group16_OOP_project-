@@ -8,12 +8,12 @@ package mainpkg;
  *
  * @author Asus
  */
-public class OrderProduct {
+public class Material {
     private String ProductName;
     private int ProductId;
     private int Quantity;
 
-    public OrderProduct(String ProductName, int ProductId, int Quantity) {
+    public Material(String ProductName, int ProductId, int Quantity) {
         this.ProductName = ProductName;
         this.ProductId = ProductId;
         this.Quantity = Quantity;

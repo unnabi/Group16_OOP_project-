@@ -42,7 +42,7 @@ public class RawMaterialDashboardController implements Initializable {
         Parent sceneA = null;
         
         if(a=="MaterialOrder"){
-            sceneA=FXMLLoader.load(getClass().getResource("orderProduct.fxml"));   
+            sceneA=FXMLLoader.load(getClass().getResource("materialList.fxml"));   
             
         }
         else if(a=="DeliveryProduct"){

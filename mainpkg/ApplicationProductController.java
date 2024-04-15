@@ -75,7 +75,7 @@ public class ApplicationProductController implements Initializable {
     @FXML
     private void addButtonOnClick(ActionEvent event) {
        String ProductId=productIdOnClick.getText();
-        if (ProductId.isEmpty()){
+        if (ProductId . isEmpty()){
             unfilled.show();
         return;
         }
