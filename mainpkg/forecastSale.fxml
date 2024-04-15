@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="684.0" prefWidth="875.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ForeCastSalesController">
+   <children>
+      <TextField fx:id="salesForecastOnClick" layoutX="220.0" layoutY="165.0" prefHeight="31.0" prefWidth="515.0" />
+      <Label layoutX="85.0" layoutY="117.0" text="Month">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="56.0" text="SelectProduct">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="67.0" layoutY="170.0" text="saleForcastProduct">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalSaleOnClick" layoutX="220.0" layoutY="232.0" prefHeight="31.0" prefWidth="515.0" />
+      <Label layoutX="62.0" layoutY="237.0" text="TotalSaleProduct">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="543.0" layoutY="621.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="31.0" prefWidth="208.0" text="Back" />
+      <Button layoutX="68.0" layoutY="327.0" mnemonicParsing="false" onAction="#addButtonOnClick" text="Add item" />
+      <Button layoutX="670.0" layoutY="335.0" mnemonicParsing="false" onAction="#generateForecastButtonClick" text="Generate Forecast" />
+      <TableView fx:id="tableVieewOnClick" layoutX="10.0" layoutY="378.0" prefHeight="200.0" prefWidth="854.0">
+         <columns>
+            <TableColumn fx:id="productNameTableOnClick" prefWidth="136.0" text="product Name" />
+            <TableColumn fx:id="monthTableOnClick" minWidth="8.0" prefWidth="177.0" text="month" />
+            <TableColumn fx:id="salesForsecastTableOnClick" minWidth="0.0" prefWidth="303.0" text="salesForecast" />
+            <TableColumn fx:id="totalSaleTableOnClick" prefWidth="233.0" text="totalSale" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="monthComboBoxOnClick" layoutX="213.0" layoutY="112.0" prefHeight="31.0" prefWidth="515.0" />
+      <ComboBox fx:id="productNameComboBoXOnClick" layoutX="220.0" layoutY="51.0" onAction="#selectProductButtonOnClick" prefHeight="31.0" prefWidth="508.0" />
+   </children>
+</AnchorPane>

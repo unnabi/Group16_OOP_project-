@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="673.0" prefWidth="815.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mainpkg.ProductPerformanceController">
+   <children>
+      <Text layoutX="286.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Performance Rating">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Text>
+      <Label layoutX="82.0" layoutY="235.0" text="Product ID" />
+      <Label layoutX="70.0" layoutY="130.0" text="Product Name" />
+      <Label layoutX="59.0" layoutY="332.0" text="Rating of Product" />
+      <TextField fx:id="productIdOnClick" layoutX="199.0" layoutY="230.0" promptText="productIdOnClick" />
+      <TextField fx:id="productRatingOnClick" layoutX="199.0" layoutY="327.0" />
+      <Button layoutX="42.0" layoutY="396.0" mnemonicParsing="false" onAction="#generateRatingButtonOnClick" prefHeight="31.0" prefWidth="536.0" text="SelectID" />
+      <ComboBox fx:id="comboBoxOnClick" layoutX="46.0" layoutY="444.0" prefHeight="31.0" prefWidth="415.0" />
+      <TextArea fx:id="textAreaOnClick" layoutX="400.0" layoutY="109.0" prefHeight="273.0" prefWidth="458.0" style="-fx-background-color: pink; -fx-background-color: pink;" />
+      <Text layoutX="643.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Rting of product">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button layoutX="66.0" layoutY="550.0" mnemonicParsing="false" onAction="#backButtonOnClick" prefHeight="31.0" prefWidth="542.0" text="Back" />
+      <Button layoutX="643.0" layoutY="396.0" mnemonicParsing="false" onAction="#showRatingButtonOnClick" text="Show rating" />
+      <ComboBox fx:id="productNameComboBoxOnClock" layoutX="199.0" layoutY="125.0" prefHeight="31.0" prefWidth="187.0" />
+   </children>
+</AnchorPane>
