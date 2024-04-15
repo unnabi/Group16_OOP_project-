@@ -1,66 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package mainpkg;
 
-package Retailer;
+/**
+ *
+ * @author Asus
+ */
+public class FeedBack {
+    private String ClientId;
+    private String ClientComment;
+    private String ProductName;
 
-import java.io.Serializable;
-
-public class FeedBack implements Serializable{
-    
-    private String employeeName,feedback,typeOfFB;
-    private int employeeID,contactNum;
-
-    public FeedBack() {
+    public FeedBack(String ClientId, String ClientComment, String ProductName) {
+        this.ClientId = ClientId;
+        this.ClientComment = ClientComment;
+        this.ProductName = ProductName;
     }
 
-    public FeedBack(String employeeName, String feedback, String typeOfFB, int employeeID, int contactNum) {
-        this.employeeName = employeeName;
-        this.feedback = feedback;
-        this.typeOfFB = typeOfFB;
-        this.employeeID = employeeID;
-        this.contactNum = contactNum;
+    public String getClientId() {
+        return ClientId;
     }
 
-    public String getEmployeeName() {
-        return employeeName;
+    public String getClientComment() {
+        return ClientComment;
     }
 
-    public void setEmployeeName(String employeeName) {
-        this.employeeName = employeeName;
+    public String getProductName() {
+        return ProductName;
     }
 
-    public String getFeedback() {
-        return feedback;
+    public void setClientId(String ClientId) {
+        this.ClientId = ClientId;
     }
 
-    public void setFeedback(String feedback) {
-        this.feedback = feedback;
+    public void setClientComment(String ClientComment) {
+        this.ClientComment = ClientComment;
     }
 
-    public String getTypeOfFB() {
-        return typeOfFB;
-    }
-
-    public void setTypeOfFB(String typeOfFB) {
-        this.typeOfFB = typeOfFB;
-    }
-
-    public int getEmployeeID() {
-        return employeeID;
-    }
-
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
-    }
-
-    public int getContactNum() {
-        return contactNum;
-    }
-
-    public void setContactNum(int contactNum) {
-        this.contactNum = contactNum;
+    public void setProductName(String ProductName) {
+        this.ProductName = ProductName;
     }
 
     @Override
     public String toString() {
-        return "FeedBack{" + "employeeName=" + employeeName + ", feedback=" + feedback + ", typeOfFB=" + typeOfFB + ", employeeID=" + employeeID + ", contactNum=" + contactNum + '}';
+        return "FeedBack{" + "ClientId=" + ClientId + ", ClientComment=" + ClientComment + ", ProductName=" + ProductName + '}';
     }
-}
+
+}  
