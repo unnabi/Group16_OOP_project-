@@ -59,7 +59,7 @@ public class SalesOfficerFXMLController implements Initializable {
              sceneA=FXMLLoader.load(getClass().getResource("salesReport.fxml"));   
         }
         else if(a=="Performance Rating"){
-             sceneA=FXMLLoader.load(getClass().getResource("productPerformance.fxml"));   
+             sceneA=FXMLLoader.load(getClass().getResource("ratingProductPerformance.fxml"));   
         }
         else if(a=="Client FeedBack"){
              sceneA=FXMLLoader.load(getClass().getResource("feedbackClient.fxml"));   
